@@ -133,16 +133,70 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom skills strip (full-width pinned) */}
+      {/* Bottom skills strip (full-width pinned, infinite auto-scroll) */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-20">
-        <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12 text-lg md:text-xl font-bold">
-          <span className="whitespace-nowrap">Frontend</span>
-          <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">Backend</span>
-          <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">APIs</span>
-          <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">DevOps</span>
+        <div className="mx-auto max-w-none bg-black text-white rounded-none">
+          <div className="marquee overflow-hidden">
+            <div className="flex items-center gap-12 md:gap-16 py-3 md:py-4 px-6 md:px-10 whitespace-nowrap animate-marquee text-lg md:text-xl font-bold">
+              {/* Sequence A */}
+              <div className="flex items-center gap-12 md:gap-16">
+                <span>Frontend</span>
+                <span className="text-orange-500">✦</span>
+                <span>Backend</span>
+                <span className="text-orange-500">✦</span>
+                <span>APIs</span>
+                <span className="text-orange-500">✦</span>
+                <span>DevOps</span>
+                <span className="text-orange-500">✦</span>
+                <span>Databases</span>
+                <span className="text-orange-500">✦</span>
+                <span>CI/CD</span>
+                <span className="text-orange-500">✦</span>
+                <span>Docker</span>
+                <span className="text-orange-500">✦</span>
+                <span>Kubernetes</span>
+                <span className="text-orange-500">✦</span>
+                <span>React</span>
+                <span className="text-orange-500">✦</span>
+                <span>Node.js</span>
+                <span className="text-orange-500">✦</span>
+                <span>Express</span>
+                <span className="text-orange-500">✦</span>
+                <span>TypeScript</span>
+                <span className="text-orange-500">✦</span>
+                <span>Next.js</span>
+              </div>
+
+              {/* Sequence B (duplicate for seamless loop) */}
+              <div className="flex items-center gap-12 md:gap-16" aria-hidden="true">
+                <span>Frontend</span>
+                <span className="text-orange-500">✦</span>
+                <span>Backend</span>
+                <span className="text-orange-500">✦</span>
+                <span>APIs</span>
+                <span className="text-orange-500">✦</span>
+                <span>DevOps</span>
+                <span className="text-orange-500">✦</span>
+                <span>Databases</span>
+                <span className="text-orange-500">✦</span>
+                <span>CI/CD</span>
+                <span className="text-orange-500">✦</span>
+                <span>Docker</span>
+                <span className="text-orange-500">✦</span>
+                <span>Kubernetes</span>
+                <span className="text-orange-500">✦</span>
+                <span>React</span>
+                <span className="text-orange-500">✦</span>
+                <span>Node.js</span>
+                <span className="text-orange-500">✦</span>
+                <span>Express</span>
+                <span className="text-orange-500">✦</span>
+                <span>TypeScript</span>
+                <span className="text-orange-500">✦</span>
+                <span>Next.js</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
