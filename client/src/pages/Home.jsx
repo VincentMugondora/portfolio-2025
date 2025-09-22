@@ -70,11 +70,11 @@ export default function Home() {
         </div>
 
         {/* Center: portrait with orange circle + floating CTA */}
-        <div className="order-1 lg:order-2 relative flex justify-center">
+        <div className="order-1 lg:order-2 relative flex justify-center items-end min-h-[24rem] md:min-h-[30rem] lg:min-h-[34rem]">
           {/* Orange circle backdrop */}
-          <div className="absolute bottom-6 w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[30rem] lg:h-[30rem] rounded-full bg-orange-500" />
+          <div className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] rounded-full bg-orange-500" />
           <div
-            className="absolute bottom-6 w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[30rem] lg:h-[30rem] rounded-full opacity-20"
+            className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] rounded-full opacity-20"
             style={{
               backgroundImage:
                 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px), radial-gradient(circle at 70% 60%, white 1px, transparent 1px)',
@@ -86,12 +86,12 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
             alt="Portrait"
-            className="relative z-10 w-72 md:w-[22rem] lg:w-[24rem] drop-shadow-2xl"
+            className="relative z-20 w-72 md:w-[23rem] lg:w-[26rem] drop-shadow-2xl"
             loading="lazy"
           />
 
           {/* Floating CTA */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 bg-white border-4 md:border-8 rounded-full shadow-2xl flex gap-2 p-1.5 md:p-2.5">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 bg-white border-4 md:border-6 border-black rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-2 p-1.5 md:p-2.5">
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 rounded-full px-6 md:px-7 py-3 md:py-3 text-base md:text-lg font-semibold bg-black text-white hover:bg-gray-900"
@@ -106,18 +106,23 @@ export default function Home() {
               Hire Me
             </Link>
           </div>
+
+          {/* Floating skill tags to the right of portrait */}
+          <div className="pointer-events-none absolute right-0 top-6 md:top-8 w-56 md:w-64 hidden md:block">
+            <div className="flex flex-wrap gap-3 justify-end">
+              <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
+              <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
+              <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
+              <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
+              <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
+            </div>
+          </div>
         </div>
 
-        {/* Right: skill tags + social */}
+        {/* Right: social only to match layout */}
         <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-6">
-          <div className="flex flex-wrap gap-3 justify-start lg:justify-end max-w-xs">
-            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
-            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
-            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
-            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
-          </div>
-          <div className="pt-2">
+          <div className="hidden" />
+          <div className="pt-2 pr-2 text-right">
             <div className="text-sm text-gray-500 mb-3">Follow Me On</div>
             <div className="flex items-center gap-3">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">f</a>
@@ -130,7 +135,7 @@ export default function Home() {
       </div>
 
       {/* Bottom skills strip (full-width, pinned to hero bottom) */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-4 md:px-8">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-4 md:px-8 z-10">
         <div className="mx-auto max-w-none bg-black text-white rounded-full px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
