@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="relative overflow-x-hidden pt-2 md:pt-4 pb-10 md:pb-12">
+    <section className="relative pt-2 md:pt-4 pb-10 md:pb-12 min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)]">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 -z-10"
