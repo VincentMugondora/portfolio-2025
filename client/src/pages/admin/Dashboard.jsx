@@ -131,7 +131,7 @@ function SkillsManager() {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-  const [form, setForm] = useState({ name: '', level: 75, category: 'General' })
+  const [form, setForm] = useState({ name: '', category: 'General' })
 
   const load = () => {
     setLoading(true)
@@ -153,10 +153,9 @@ function SkillsManager() {
     try {
       await skills.create({
         name: form.name,
-        level: Number(form.level),
         category: form.category,
       })
-      setForm({ name: '', level: 75, category: 'General' })
+      setForm({ name: '', category: 'General' })
       load()
     } catch (e) {
       setError(e.message)
@@ -177,18 +176,6 @@ function SkillsManager() {
           <input name="name" value={form.name} onChange={onChange} required className="w-full border rounded px-3 py-2" />
         </div>
         <div>
-          <label className="block text-sm mb-1">Level (%)</label>
-          <input
-            name="level"
-            type="number"
-            min="0"
-            max="100"
-            value={form.level}
-            onChange={onChange}
-            className="w-full border rounded px-3 py-2"
-          />
-        </div>
-        <div>
           <label className="block text-sm mb-1">Category</label>
           <input name="category" value={form.category} onChange={onChange} className="w-full border rounded px-3 py-2" />
         </div>
@@ -207,7 +194,6 @@ function SkillsManager() {
             <li key={s._id} className="border rounded p-3 flex items-center justify-between bg-gray-50">
               <div>
                 <span className="font-medium">{s.name}</span>
-                <span className="text-sm text-gray-500 ml-2">{s.level}%</span>
                 <span className="text-sm text-gray-500 ml-2">{s.category}</span>
               </div>
               <button className="text-red-600 text-sm hover:underline" onClick={() => onDelete(s._id)}>

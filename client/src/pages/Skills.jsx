@@ -36,20 +36,11 @@ export default function Skills() {
           {Object.entries(byCategory).map(([cat, list]) => (
             <div key={cat}>
               <h2 className="font-semibold mb-4">{cat}</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex flex-wrap gap-2">
                 {list.map((s) => (
-                  <div key={s._id} className="bg-white border rounded p-4">
-                    <div className="flex justify-between mb-2">
-                      <span>{s.name}</span>
-                      <span className="text-sm text-gray-500">{s.level}%</span>
-                    </div>
-                    <div className="h-2 bg-gray-200 rounded">
-                      <div
-                        className="h-2 bg-blue-600 rounded"
-                        style={{ width: `${s.level || 0}%` }}
-                      />
-                    </div>
-                  </div>
+                  <span key={s._id} className="px-3 py-1 rounded-full bg-white border text-sm">
+                    {s.name}
+                  </span>
                 ))}
               </div>
             </div>
