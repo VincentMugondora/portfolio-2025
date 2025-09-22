@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="relative pt-6 md:pt-10 pb-20 md:pb-28">
+    <section className="relative pt-2 md:pt-4 pb-10 md:pb-12">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 -z-10"
@@ -37,25 +37,25 @@ export default function Home() {
 
       {/* Heading */}
       <div className="text-center">
-        <div className="inline-flex items-center gap-2 text-sm text-gray-500">
+        <div className="inline-flex items-center gap-1 text-sm text-gray-500">
           <span className="h-px w-8 bg-orange-500" />
           Hello There!
         </div>
-        <h1 className="mt-3 md:mt-4 text-3xl md:text-6xl font-extrabold tracking-tight">
+        <h1 className="mt-1 md:mt-2 text-3xl md:text-6xl font-extrabold tracking-tight">
           I’m <span className="text-orange-600">Vincent Mugondora</span>
         </h1>
-        <p className="mt-3 text-gray-600 md:text-lg">Full‑stack Developer</p>
+        <p className="mt-1 md:mt-2 text-gray-600 md:text-lg">Full‑stack Developer</p>
       </div>
 
       {/* Main hero content */}
-      <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
+      <div className="mt-4 md:mt-6 grid grid-cols-1 lg:grid-cols-3 items-center gap-3 md:gap-4">
         {/* Left: testimonial + reviews */}
-        <div className="order-2 lg:order-1 space-y-6">
+        <div className="order-2 lg:order-1 space-y-3 md:space-y-4">
           <div className="text-orange-500 text-5xl leading-none">“</div>
           <p className="text-gray-700 max-w-xs">
             Vincent’s remarkable work transformed our website — highly recommended!
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <div className="flex -space-x-2">
               <span className="w-8 h-8 rounded-full bg-gray-200 border border-white inline-block" />
               <span className="w-8 h-8 rounded-full bg-gray-300 border border-white inline-block" />
@@ -113,17 +113,17 @@ export default function Home() {
         </div>
 
         {/* Right: skill tags + social */}
-        <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-6">
-          <div className="flex flex-wrap gap-3 justify-start lg:justify-end max-w-xs">
+        <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-3">
+          <div className="flex flex-wrap gap-2 justify-start lg:justify-end max-w-xs">
             <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
             <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
             <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
             <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
             <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
           </div>
-          <div className="pt-2">
-            <div className="text-sm text-gray-500 mb-3">Follow Me On</div>
-            <div className="flex items-center gap-3">
+          <div className="pt-1">
+            <div className="text-sm text-gray-500 mb-2">Follow Me On</div>
+            <div className="flex items-center gap-2">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">f</a>
               <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">x</a>
               <a href="https://pinterest.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">p</a>
@@ -134,8 +134,8 @@ export default function Home() {
       </div>
 
       {/* Bottom skills strip */}
-      <div className="mt-12 md:mt-16">
-        <div className="bg-black text-white rounded-full px-5 py-3 flex items-center gap-6 overflow-x-auto">
+      <div className="mt-6 md:mt-8">
+        <div className="bg-black text-white rounded-full px-3 py-2 flex items-center gap-3 overflow-x-auto">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
           <span className="whitespace-nowrap">Dashboard</span>
