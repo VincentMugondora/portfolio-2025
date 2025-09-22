@@ -14,8 +14,8 @@ export default function Home() {
         }}
       />
 
-      {/* Rotating Hire Me sticker */}
-      <div className="hidden md:block absolute right-6 top-4 z-20">
+      {/* Rotating Hire Me sticker (hidden for tighter match to reference) */}
+      <div className="hidden">
         <div className="relative w-24 h-24">
           <svg viewBox="0 0 100 100" className="absolute inset-0 animate-spin">
             <defs>
@@ -35,8 +35,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Heading */}
-      <div className="text-center">
+      {/* Heading (hidden to match cropped hero look) */}
+      <div className="hidden">
         <div className="inline-flex items-center gap-2 text-sm text-gray-500">
           <span className="h-px w-8 bg-orange-500" />
           Hello There!
@@ -48,9 +48,9 @@ export default function Home() {
       </div>
 
       {/* Main hero content */}
-      <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
+      <div className="mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-12">
         {/* Left: testimonial + reviews */}
-        <div className="order-2 lg:order-1 space-y-6">
+        <div className="order-2 lg:order-1 space-y-4 md:space-y-6 max-w-sm pl-2 md:pl-6">
           <div className="text-orange-500 text-5xl leading-none">“</div>
           <p className="text-gray-700 max-w-xs">
             Vincent’s remarkable work transformed our website — highly recommended!
@@ -72,9 +72,9 @@ export default function Home() {
         {/* Center: portrait with orange circle + floating CTA */}
         <div className="order-1 lg:order-2 relative flex justify-center">
           {/* Orange circle backdrop */}
-          <div className="absolute bottom-5 md:bottom-8 w-72 h-72 md:w-[26rem] md:h-[26rem] rounded-full bg-orange-500/90" />
+          <div className="absolute bottom-6 w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[30rem] lg:h-[30rem] rounded-full bg-orange-500" />
           <div
-            className="absolute bottom-5 md:bottom-8 w-72 h-72 md:w-[26rem] md:h-[26rem] rounded-full opacity-20"
+            className="absolute bottom-6 w-80 h-80 md:w-[28rem] md:h-[28rem] lg:w-[30rem] lg:h-[30rem] rounded-full opacity-20"
             style={{
               backgroundImage:
                 'radial-gradient(circle at 30% 30%, white 1px, transparent 1px), radial-gradient(circle at 70% 60%, white 1px, transparent 1px)',
@@ -86,22 +86,22 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
             alt="Portrait"
-            className="relative z-10 w-64 md:w-80 lg:w-96 drop-shadow-xl"
+            className="relative z-10 w-72 md:w-[22rem] lg:w-[24rem] drop-shadow-2xl"
             loading="lazy"
           />
 
           {/* Floating CTA */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 bg-white border rounded-full shadow-xl flex gap-2 p-2">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 bg-white border-4 md:border-8 rounded-full shadow-2xl flex gap-2 p-1.5 md:p-2.5">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 bg-black text-white hover:bg-gray-900"
+              className="inline-flex items-center gap-2 rounded-full px-6 md:px-7 py-3 md:py-3 text-base md:text-lg font-semibold bg-black text-white hover:bg-gray-900"
             >
               <span>Portfolio</span>
               <span className="inline-block w-2 h-2 rounded-full bg-orange-500" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-full px-5 py-2 bg-white text-gray-900 border hover:bg-gray-50"
+              className="inline-flex items-center rounded-full px-6 md:px-7 py-3 md:py-3 text-base md:text-lg font-semibold bg-white text-gray-900 hover:bg-gray-50"
             >
               Hire Me
             </Link>
@@ -129,9 +129,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom skills strip */}
-      <div className="mt-12 md:mt-16">
-        <div className="bg-black text-white rounded-full px-5 py-3 flex items-center gap-6 overflow-x-auto">
+      {/* Bottom skills strip (full-width, pinned to hero bottom) */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-4 md:px-8">
+        <div className="mx-auto max-w-none bg-black text-white rounded-full px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
           <span className="whitespace-nowrap">Dashboard</span>
