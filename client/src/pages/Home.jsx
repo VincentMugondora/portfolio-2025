@@ -14,6 +14,27 @@ export default function Home() {
         }}
       />
 
+      {/* Rotating Hire Me sticker */}
+      <div className="hidden md:block absolute right-6 top-4 z-20">
+        <div className="relative w-24 h-24">
+          <svg viewBox="0 0 100 100" className="absolute inset-0 animate-spin">
+            <defs>
+              <path id="textcircle" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0" />
+            </defs>
+            <text fontSize="10" fontWeight="600" letterSpacing="2" fill="#111">
+              <textPath href="#textcircle">• HIRE ME • HIRE ME • HIRE ME • HIRE ME</textPath>
+            </text>
+          </svg>
+          <Link
+            to="/contact"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-orange-500 text-white grid place-items-center shadow"
+            aria-label="Hire Me"
+          >
+            ↗
+          </Link>
+        </div>
+      </div>
+
       {/* Heading */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 text-sm text-gray-500">
@@ -105,6 +126,19 @@ export default function Home() {
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">ig</a>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom skills strip */}
+      <div className="mt-12 md:mt-16">
+        <div className="bg-black text-white rounded-full px-5 py-3 flex items-center gap-6 overflow-x-auto">
+          <span className="whitespace-nowrap">Website Design</span>
+          <span className="text-orange-500">✦</span>
+          <span className="whitespace-nowrap">Dashboard</span>
+          <span className="text-orange-500">✦</span>
+          <span className="whitespace-nowrap">Wireframe</span>
+          <span className="text-orange-500">✦</span>
+          <span className="whitespace-nowrap">User Research</span>
         </div>
       </div>
     </section>
