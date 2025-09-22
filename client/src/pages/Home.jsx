@@ -134,7 +134,7 @@ export default function Home() {
       </div>
 
       {/* Bottom skills strip (full-width pinned, infinite auto-scroll) */}
-      <div className="absolute left-0 right-0 bottom-0 z-20">
+      <div className="absolute w-[calc(100vw- 2vw)] left-[-3rem] right-0 bottom-0 z-20">
         <div className="w-full bg-black text-white rounded-none">
           <div className="marquee w-full overflow-hidden">
             <div className="flex items-center gap-12 md:gap-16 py-3 md:py-4 px-6 md:px-10 whitespace-nowrap animate-marquee text-lg md:text-xl font-bold">
