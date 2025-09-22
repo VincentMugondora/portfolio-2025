@@ -95,17 +95,17 @@ export default function Home() {
           />
 
           {/* Floating CTA */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 bg-white border-4 md:border-8 border-black rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-2 p-1.5 md:p-2">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-4 md:bottom-6 z-30 bg-white rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-3 md:gap-4 p-2 md:p-3">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-3 rounded-full px-6 md:px-7 h-11 md:h-12 bg-black text-white font-semibold hover:bg-gray-900"
+              className="inline-flex items-center gap-3 rounded-full px-7 md:px-9 h-11 md:h-12 bg-black text-white font-semibold hover:bg-gray-900"
             >
               <span>Portfolio</span>
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-orange-500 text-white text-[10px] md:text-xs leading-none">→</span>
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-full px-6 md:px-7 h-11 md:h-12 bg-white text-gray-900 border-2 border-black font-semibold hover:bg-gray-50"
+              className="inline-flex items-center rounded-full px-7 md:px-9 h-11 md:h-12 bg-white text-gray-900 border-2 border-black font-semibold hover:bg-gray-50"
             >
               Hire Me
             </Link>
@@ -115,11 +115,11 @@ export default function Home() {
         {/* Right: skill tags + social */}
         <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-3">
           <div className="flex flex-wrap gap-2 justify-start lg:justify-end max-w-xs">
-            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
-            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
-            <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
-            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
-            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
+            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Frontend</span>
+            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Backend</span>
+            <span className="px-3 py-1.5 rounded-full bg-white border text-sm">REST APIs</span>
+            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">DevOps</span>
+            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Databases</span>
           </div>
           <div className="pt-1">
             <div className="text-sm text-gray-500 mb-2">Follow Us On</div>
@@ -136,13 +136,13 @@ export default function Home() {
       {/* Bottom skills strip (full-width pinned) */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-20">
         <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12 text-lg md:text-xl font-bold">
-          <span className="whitespace-nowrap">Website Design</span>
+          <span className="whitespace-nowrap">Frontend</span>
           <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">Dashboard</span>
+          <span className="whitespace-nowrap">Backend</span>
           <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">Wireframe</span>
+          <span className="whitespace-nowrap">APIs</span>
           <span className="text-orange-500">✦</span>
-          <span className="whitespace-nowrap">User Research</span>
+          <span className="whitespace-nowrap">DevOps</span>
         </div>
       </div>
     </section>
