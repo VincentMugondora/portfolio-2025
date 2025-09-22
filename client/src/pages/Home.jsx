@@ -9,13 +9,13 @@ export default function Home() {
         style={{
           backgroundImage:
             'linear-gradient(to right, rgba(0,0,0,.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,.04) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
+          backgroundSize: '40px 40px',
           backgroundPosition: 'center',
         }}
       />
 
-      {/* Rotating Hire Me sticker (hidden for tighter match to reference) */}
-      <div className="hidden">
+      {/* Rotating Hire Me sticker */}
+      <div className="hidden md:block absolute right-6 top-4 z-20">
         <div className="relative w-24 h-24">
           <svg viewBox="0 0 100 100" className="absolute inset-0 animate-spin">
             <defs>
@@ -35,8 +35,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Heading (hidden to match cropped hero look) */}
-      <div className="hidden">
+      {/* Heading */}
+      <div className="text-center">
         <div className="inline-flex items-center gap-2 text-sm text-gray-500">
           <span className="h-px w-8 bg-orange-500" />
           Hello There!
@@ -48,9 +48,9 @@ export default function Home() {
       </div>
 
       {/* Main hero content */}
-      <div className="mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
+      <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 items-center gap-8">
         {/* Left: testimonial + reviews */}
-        <div className="order-2 lg:order-1 lg:col-span-3 space-y-4 md:space-y-6 max-w-sm lg:max-w-none pl-2 md:pl-4 lg:pl-2 justify-self-start self-center">
+        <div className="order-2 lg:order-1 space-y-6">
           <div className="text-orange-500 text-5xl leading-none">“</div>
           <p className="text-gray-700 max-w-xs">
             Vincent’s remarkable work transformed our website — highly recommended!
@@ -63,81 +63,66 @@ export default function Home() {
               <span className="w-8 h-8 rounded-full bg-gray-300 border border-white inline-block" />
             </div>
             <div>
-              <div className="font-semibold"><span className="text-orange-600">150+ Reviews</span> <span className="text-gray-900">(4.9 of 5)</span></div>
+              <div className="text-orange-600 font-semibold">150+ Reviews (4.9 of 5)</div>
               <div className="text-gray-500 text-sm">Reviews from valued clients</div>
             </div>
           </div>
         </div>
 
         {/* Center: portrait with orange circle + floating CTA */}
-        <div className="order-1 lg:order-2 lg:col-span-6 relative flex justify-center items-end min-h-[26rem] md:min-h-[32rem] lg:min-h-[36rem]">
+        <div className="order-1 lg:order-2 relative flex justify-center">
           {/* Orange circle backdrop */}
-          <div className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] rounded-full bg-orange-500" />
-          <div
-            className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] rounded-full opacity-20"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 30% 30%, white 1px, transparent 1px), radial-gradient(circle at 70% 60%, white 1px, transparent 1px)',
-              backgroundSize: '20px 20px',
-            }}
-          />
-
-          {/* Subtle wavy pattern overlay */}
           <svg
-            className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] z-10"
-            viewBox="0 0 100 100"
+            className="absolute bottom-5 md:bottom-8 w-72 h-72 md:w-[26rem] md:h-[26rem] z-0 opacity-90 text-orange-500"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
+            preserveAspectRatio="xMidYMid meet"
           >
-            <defs>
-              <pattern id="wavePattern" patternUnits="userSpaceOnUse" width="12" height="12">
-                <path d="M 0 6 Q 3 0 6 6 T 12 6" fill="none" stroke="white" strokeWidth="1.2" />
-              </pattern>
-            </defs>
-            <circle cx="50" cy="50" r="50" fill="url(#wavePattern)" opacity="0.15" />
+            <path
+              fill="currentColor"
+              d="M49.2,-61.2C63.3,-50.8,75.6,-37,79.2,-21.6C82.7,-6.2,77.4,10.8,69.3,25.9C61.1,41,50.1,54.2,36.5,63C23,71.8,6.9,76.2,-8.6,77.5C-24,78.8,-47.8,77,-60.2,65.6C-72.6,54.2,-73.7,33.1,-76.5,13.2C-79.2,-6.7,-83.6,-25.4,-76.5,-39.3C-69.4,-53.2,-50.8,-62.3,-33.4,-72.1C-16,-81.8,0.3,-92.2,16.6,-92.1C32.9,-92,49.2,-81.5,49.2,-61.2Z"
+              transform="translate(100 100)"
+            />
           </svg>
 
           {/* Portrait (placeholder) */}
           <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
             alt="Portrait"
-            className="relative z-20 w-72 md:w-[23rem] lg:w-[26rem] drop-shadow-2xl"
+            className="relative z-10 w-64 md:w-80 lg:w-96 drop-shadow-xl"
             loading="lazy"
           />
 
           {/* Floating CTA */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 bg-white border-4 md:border-8 border-black rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-2 p-1.5 md:p-3">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 bg-white border rounded-full shadow-xl flex gap-2 p-2">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-3 rounded-full px-7 md:px-8 py-3 md:py-3.5 text-base md:text-xl font-semibold bg-black text-white hover:bg-gray-900"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2 bg-black text-white hover:bg-gray-900"
             >
               <span>Portfolio</span>
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-orange-500 text-white text-xs font-bold">+</span>
+              <span className="inline-block w-2 h-2 rounded-full bg-orange-500" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-full px-7 md:px-8 py-3 md:py-3.5 text-base md:text-xl font-semibold bg-white text-gray-900 hover:bg-gray-50"
+              className="inline-flex items-center rounded-full px-5 py-2 bg-white text-gray-900 border hover:bg-gray-50"
             >
               Hire Me
             </Link>
           </div>
-
-          {/* Floating skill tags to the right of portrait */}
-          <div className="pointer-events-none absolute right-0 md:right-4 top-8 md:top-12 w-56 md:w-64 hidden md:block">
-            <div className="flex flex-wrap gap-3 justify-end">
-              <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
-              <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
-              <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
-              <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
-              <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
-            </div>
-          </div>
         </div>
 
-        {/* Right: social only to match layout */}
-        <div className="order-3 lg:order-3 lg:col-span-3 flex flex-col items-start lg:items-end gap-6 self-center">
-          <div className="hidden" />
-          <div className="pt-2 pr-2 text-right">
-            <div className="text-sm text-gray-500 mb-3">Follow Us On</div>
+        {/* Right: skill tags + social */}
+        <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-6">
+          <div className="flex flex-wrap gap-3 justify-start lg:justify-end max-w-xs">
+            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
+            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
+            <span className="px-3 py-1.5 rounded-full bg-white border text-sm">Mobile App Design</span>
+            <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Design System</span>
+            <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
+          </div>
+          <div className="pt-2">
+            <div className="text-sm text-gray-500 mb-3">Follow Me On</div>
             <div className="flex items-center gap-3">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">f</a>
               <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">x</a>
@@ -148,9 +133,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom skills strip (full-width, pinned to hero bottom) */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-10">
-        <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12">
+      {/* Bottom skills strip */}
+      <div className="mt-12 md:mt-16">
+        <div className="bg-black text-white rounded-full px-5 py-3 flex items-center gap-6 overflow-x-auto">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
           <span className="whitespace-nowrap">Dashboard</span>
