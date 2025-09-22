@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { auth, clearToken, projects, skills, certificates, messages } from '../../lib/api'
 import { useNavigate } from 'react-router-dom'
+import { uploadUrl } from '../../lib/url'
 
 function Section({ title, children, actions }) {
   return (
@@ -291,9 +292,9 @@ function CertificatesManager() {
             <div key={c._id} className="border rounded overflow-hidden bg-gray-50">
               <div className="aspect-video flex items-center justify-center bg-white">
                 {c.fileType === 'image' ? (
-                  <img src={c.fileUrl} alt={c.title} className="object-contain w-full h-full" />
+                  <img src={uploadUrl(c.fileUrl)} alt={c.title} className="object-contain w-full h-full" />
                 ) : (
-                  <a href={c.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+                  <a href={uploadUrl(c.fileUrl)} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
                     View PDF
                   </a>
                 )}
