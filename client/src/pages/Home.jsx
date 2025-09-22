@@ -90,7 +90,7 @@ export default function Home() {
           <img
             src="/avatar.png"
             alt="Portrait"
-            className="relative z-10 w-64 md:w-80 lg:w-96 drop-shadow-xl"
+            className="relative z-10 w-64 md:w-80 drop-shadow-xl"
             loading="lazy"
           />
 
@@ -122,12 +122,12 @@ export default function Home() {
             <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Website Design</span>
           </div>
           <div className="pt-1">
-            <div className="text-sm text-gray-500 mb-2">Follow Me On</div>
+            <div className="text-sm text-gray-500 mb-2">Follow Us On</div>
             <div className="flex items-center gap-2">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">f</a>
-              <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">x</a>
-              <a href="https://pinterest.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">p</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">ig</a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full bg-white text-gray-900 shadow hover:bg-black hover:text-white">f</a>
+              <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full bg-white text-gray-900 shadow hover:bg-black hover:text-white">x</a>
+              <a href="https://pinterest.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full bg-white text-gray-900 shadow hover:bg-black hover:text-white">p</a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full bg-white text-gray-900 shadow hover:bg-black hover:text-white">ig</a>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
 
       {/* Bottom skills strip (full-width pinned) */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-20">
-        <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12 text-base md:text-lg font-semibold">
+        <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12 text-lg md:text-xl font-bold">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
           <span className="whitespace-nowrap">Dashboard</span>
