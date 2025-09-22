@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const navItemClass = ({ isActive }) =>
   [
-    'px-3 py-2 text-sm text-gray-700 hover:text-black',
+    'px-2.5 py-1.5 text-sm text-gray-700 hover:text-black',
     isActive && 'text-orange-600 underline decoration-2 underline-offset-8 decoration-orange-500',
   ]
     .filter(Boolean)
@@ -12,8 +12,8 @@ export default function Navbar() {
   return (
     <>
     <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between rounded-full border border-gray-200 bg-white/90 px-4 py-2 shadow-sm backdrop-blur">
+      <div className="container mx-auto px-4 py-2 md:py-3">
+        <div className="flex items-center justify-between rounded-full border border-gray-200 bg-white/90 px-3 py-1.5 shadow-sm backdrop-blur">
           {/* Brand */}
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold">
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <NavLink
               to="/contact"
-              className="inline-flex items-center rounded-full bg-black text-white px-5 py-2 hover:bg-gray-900 shadow-inner"
+              className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 hover:bg-gray-900 shadow-inner"
             >
               Contact Me
             </NavLink>
@@ -56,7 +56,7 @@ export default function Navbar() {
       </div>
     </header>
     {/* Spacer to offset fixed header height */}
-    <div aria-hidden="true" className="h-20 md:h-24" />
+    <div aria-hidden="true" className="h-16 md:h-20" />
     </>
   )
 }
