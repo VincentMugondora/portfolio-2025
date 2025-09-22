@@ -50,7 +50,7 @@ export default function Home() {
       {/* Main hero content */}
       <div className="mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
         {/* Left: testimonial + reviews */}
-        <div className="order-2 lg:order-1 lg:col-span-3 space-y-4 md:space-y-6 max-w-sm lg:max-w-none pl-2 md:pl-4 lg:pl-2 justify-self-start">
+        <div className="order-2 lg:order-1 lg:col-span-3 space-y-4 md:space-y-6 max-w-sm lg:max-w-none pl-2 md:pl-4 lg:pl-2 justify-self-start self-center">
           <div className="text-orange-500 text-5xl leading-none">“</div>
           <p className="text-gray-700 max-w-xs">
             Vincent’s remarkable work transformed our website — highly recommended!
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
 
         {/* Right: social only to match layout */}
-        <div className="order-3 lg:order-3 lg:col-span-3 flex flex-col items-start lg:items-end gap-6">
+        <div className="order-3 lg:order-3 lg:col-span-3 flex flex-col items-start lg:items-end gap-6 self-center">
           <div className="hidden" />
           <div className="pt-2 pr-2 text-right">
             <div className="text-sm text-gray-500 mb-3">Follow Us On</div>
