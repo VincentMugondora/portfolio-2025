@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { certificates } from '../lib/api'
+import { uploadUrl } from '../lib/url'
 
 export default function Certificates() {
   const [items, setItems] = useState([])
@@ -30,9 +31,9 @@ export default function Certificates() {
             <article key={c._id} className="bg-white rounded-lg border overflow-hidden">
               <div className="aspect-video bg-gray-100 flex items-center justify-center">
                 {c.fileType === 'image' ? (
-                  <img src={c.fileUrl} alt={c.title} className="object-contain w-full h-full" />
+                  <img src={uploadUrl(c.fileUrl)} alt={c.title} className="object-contain w-full h-full" />
                 ) : (
-                  <a href={c.fileUrl} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+                  <a href={uploadUrl(c.fileUrl)} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
                     View PDF
                   </a>
                 )}
