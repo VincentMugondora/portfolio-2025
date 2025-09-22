@@ -1,0 +1,36 @@
+You are an expert full-stack developer. Build me a personal portfolio website with the following requirements:
+
+🎨 Frontend:
+- Use React with Tailwind CSS for styling.
+- Public pages: 
+  - Home: short intro, profile photo, social links.
+  - Certificates: display uploaded certificates (PDFs or images).
+  - Projects: grid layout showing project title, description, tech stack, GitHub/demo links, and screenshots.
+  - Skills: show skills as badges or progress bars.
+  - Contact: simple form with name, email, and message (store in DB).
+- Mobile-responsive design, clean and modern (minimalistic, card-based UI).
+- Add a "Download CV" button.
+
+🔒 Admin Backend:
+- Use Node.js + Express (or FastAPI if easier).
+- Authentication: only I can log in (username + password with JWT auth).
+- Admin Dashboard (separate route `/admin`):
+  - Upload certificates (image/PDF).
+  - Add/edit/delete projects (title, description, tech stack, GitHub/demo links, screenshots).
+  - Add/edit/delete skills.
+  - View contact form submissions.
+- When I upload or edit content, it should instantly update the frontend.
+
+💾 Database:
+- Use MongoDB.
+- Collections: users, projects, certificates, skills, messages.
+
+🚀 Deployment:
+- Deploy frontend on Vercel.
+- Deploy backend + DB on Render/Railway (or AWS if easier).
+- Connect frontend and backend via REST API.
+
+✨ Notes:
+- Secure login (hash passwords).
+- Clean code with comments.
+- CRUD APIs for certificates, projects, skills, and messages.

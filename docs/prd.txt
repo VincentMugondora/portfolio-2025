@@ -1,0 +1,119 @@
+Perfect 🚀 Let’s make this structured. You’ll need **two things**:
+
+1. A **master prompt** for Windsurf that tells it exactly what to build (so you get clean, production-ready code).
+2. A **Product Requirement Document (PRD)** that describes the features and flow of your portfolio project.
+
+---
+
+# ✅ Master Prompt for Windsurf
+
+Copy and paste this into Windsurf (you can tweak later if needed):
+
+```
+You are an expert full-stack developer. Build me a personal portfolio website with the following requirements:
+
+🎨 Frontend:
+- Use React with Tailwind CSS for styling.
+- Public pages: 
+  - Home: short intro, profile photo, social links.
+  - Certificates: display uploaded certificates (PDFs or images).
+  - Projects: grid layout showing project title, description, tech stack, GitHub/demo links, and screenshots.
+  - Skills: show skills as badges or progress bars.
+  - Contact: simple form with name, email, and message (store in DB).
+- Mobile-responsive design, clean and modern (minimalistic, card-based UI).
+- Add a "Download CV" button.
+
+🔒 Admin Backend:
+- Use Node.js + Express (or FastAPI if easier).
+- Authentication: only I can log in (username + password with JWT auth).
+- Admin Dashboard (separate route `/admin`):
+  - Upload certificates (image/PDF).
+  - Add/edit/delete projects (title, description, tech stack, GitHub/demo links, screenshots).
+  - Add/edit/delete skills.
+  - View contact form submissions.
+- When I upload or edit content, it should instantly update the frontend.
+
+💾 Database:
+- Use MongoDB.
+- Collections: users, projects, certificates, skills, messages.
+
+🚀 Deployment:
+- Deploy frontend on Vercel.
+- Deploy backend + DB on Render/Railway (or AWS if easier).
+- Connect frontend and backend via REST API.
+
+✨ Notes:
+- Secure login (hash passwords).
+- Clean code with comments.
+- CRUD APIs for certificates, projects, skills, and messages.
+```
+
+---
+
+# 📄 Product Requirement Document (PRD)
+
+**Project Title:** Vincent Mugondora – Personal Portfolio with Admin Dashboard
+
+### 1. Objective
+
+Create a personal portfolio website that showcases my certificates, projects, and skills with a backend where only I can log in to manage content.
+
+### 2. Users
+
+* **Visitor (Public):**
+
+  * View portfolio (certificates, projects, skills).
+  * Download CV.
+  * Submit contact form.
+* **Admin (Me):**
+
+  * Log in securely.
+  * Upload certificates.
+  * Add/update/delete projects.
+  * Add/update/delete skills.
+  * View contact messages.
+
+### 3. Features
+
+#### Public Site (Frontend)
+
+* **Home:** Intro, photo, social links.
+* **Certificates:** Grid/gallery of certificates.
+* **Projects:** Showcase with descriptions, tech stack, GitHub/demo links, screenshots.
+* **Skills:** Display in a clean, categorized way.
+* **Contact Form:** Visitor can send a message (saved to DB).
+* **Download CV:** Button to download my CV.
+
+#### Admin (Backend + Dashboard)
+
+* Login page (JWT-based auth).
+* Dashboard with CRUD functionality:
+
+  * Certificates: upload, edit, delete.
+  * Projects: add title, description, tech stack, links, screenshots.
+  * Skills: add/edit/delete.
+  * Messages: view contact form submissions.
+
+### 4. Tech Stack
+
+* **Frontend:** React + Tailwind CSS
+* **Backend:** Node.js + Express (or FastAPI alternative)
+* **Database:** MongoDB
+* **Auth:** JWT + bcrypt for password hashing
+* **Hosting:**
+
+  * Frontend → Vercel
+  * Backend + DB → Render/Railway
+
+### 5. Non-Functional Requirements
+
+* Responsive design (mobile, tablet, desktop).
+* Secure authentication.
+* Clean, minimal UI.
+* Easy to maintain and scale.
+
+### 6. Future Enhancements (optional)
+
+* Dark/light mode.
+* Blog section.
+* Analytics dashboard.
