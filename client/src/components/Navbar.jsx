@@ -28,21 +28,18 @@ export default function Navbar() {
             <NavLink to="/" className={navItemClass} end>
               Home
             </NavLink>
-            <a href="/#services" className="px-3 py-2 text-sm text-gray-700 hover:text-black">
-              Services
-            </a>
-            <a href="/#about" className="px-3 py-2 text-sm text-gray-700 hover:text-black">
-              About
-            </a>
             <NavLink to="/projects" className={navItemClass}>
               Projects
             </NavLink>
-            <a href="/#blogs" className="px-3 py-2 text-sm text-gray-700 hover:text-black">
-              Blogs
-            </a>
-            <a href="/#testimonials" className="px-3 py-2 text-sm text-gray-700 hover:text-black">
-              Testimonials
-            </a>
+            <NavLink to="/skills" className={navItemClass}>
+              Skills
+            </NavLink>
+            <NavLink to="/certificates" className={navItemClass}>
+              Certificates
+            </NavLink>
+            <NavLink to="/contact" className={navItemClass}>
+              Contact
+            </NavLink>
           </nav>
 
           {/* Right CTA */}
@@ -59,3 +56,4 @@ export default function Navbar() {
     </header>
   )
 }
+
