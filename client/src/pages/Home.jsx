@@ -82,6 +82,20 @@ export default function Home() {
             }}
           />
 
+          {/* Subtle wavy pattern overlay */}
+          <svg
+            className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] z-10"
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern id="wavePattern" patternUnits="userSpaceOnUse" width="12" height="12">
+                <path d="M 0 6 Q 3 0 6 6 T 12 6" fill="none" stroke="white" strokeWidth="1.2" />
+              </pattern>
+            </defs>
+            <circle cx="50" cy="50" r="50" fill="url(#wavePattern)" opacity="0.15" />
+          </svg>
+
           {/* Portrait (placeholder) */}
           <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
@@ -108,7 +122,7 @@ export default function Home() {
           </div>
 
           {/* Floating skill tags to the right of portrait */}
-          <div className="pointer-events-none absolute -right-4 md:-right-6 top-6 md:top-10 w-56 md:w-64 hidden md:block">
+          <div className="pointer-events-none absolute right-0 md:right-4 top-8 md:top-12 w-56 md:w-64 hidden md:block">
             <div className="flex flex-wrap gap-3 justify-end">
               <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
               <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
