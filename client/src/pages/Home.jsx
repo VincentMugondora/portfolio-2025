@@ -48,9 +48,9 @@ export default function Home() {
       </div>
 
       {/* Main hero content */}
-      <div className="mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-3 items-center gap-8 lg:gap-12">
+      <div className="mt-6 md:mt-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
         {/* Left: testimonial + reviews */}
-        <div className="order-2 lg:order-1 space-y-4 md:space-y-6 max-w-sm pl-2 md:pl-6">
+        <div className="order-2 lg:order-1 lg:col-span-3 space-y-4 md:space-y-6 max-w-sm lg:max-w-none pl-2 md:pl-4 lg:pl-2 justify-self-start">
           <div className="text-orange-500 text-5xl leading-none">“</div>
           <p className="text-gray-700 max-w-xs">
             Vincent’s remarkable work transformed our website — highly recommended!
@@ -63,14 +63,14 @@ export default function Home() {
               <span className="w-8 h-8 rounded-full bg-gray-300 border border-white inline-block" />
             </div>
             <div>
-              <div className="text-orange-600 font-semibold">150+ Reviews (4.9 of 5)</div>
+              <div className="font-semibold"><span className="text-orange-600">150+ Reviews</span> <span className="text-gray-900">(4.9 of 5)</span></div>
               <div className="text-gray-500 text-sm">Reviews from valued clients</div>
             </div>
           </div>
         </div>
 
         {/* Center: portrait with orange circle + floating CTA */}
-        <div className="order-1 lg:order-2 relative flex justify-center items-end min-h-[24rem] md:min-h-[30rem] lg:min-h-[34rem]">
+        <div className="order-1 lg:order-2 lg:col-span-6 relative flex justify-center items-end min-h-[26rem] md:min-h-[32rem] lg:min-h-[36rem]">
           {/* Orange circle backdrop */}
           <div className="absolute bottom-8 lg:bottom-10 w-80 h-80 md:w-[30rem] md:h-[30rem] lg:w-[34rem] lg:h-[34rem] rounded-full bg-orange-500" />
           <div
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
 
           {/* Floating skill tags to the right of portrait */}
-          <div className="pointer-events-none absolute right-0 top-6 md:top-8 w-56 md:w-64 hidden md:block">
+          <div className="pointer-events-none absolute -right-4 md:-right-6 top-6 md:top-10 w-56 md:w-64 hidden md:block">
             <div className="flex flex-wrap gap-3 justify-end">
               <span className="px-3 py-1.5 rounded-full bg-black text-white text-sm">Prototype</span>
               <span className="px-3 py-1.5 rounded-full bg-orange-500 text-white text-sm">Dashboard</span>
@@ -120,10 +120,10 @@ export default function Home() {
         </div>
 
         {/* Right: social only to match layout */}
-        <div className="order-3 lg:order-3 flex flex-col items-start lg:items-end gap-6">
+        <div className="order-3 lg:order-3 lg:col-span-3 flex flex-col items-start lg:items-end gap-6">
           <div className="hidden" />
           <div className="pt-2 pr-2 text-right">
-            <div className="text-sm text-gray-500 mb-3">Follow Me On</div>
+            <div className="text-sm text-gray-500 mb-3">Follow Us On</div>
             <div className="flex items-center gap-3">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">f</a>
               <a href="https://x.com" target="_blank" rel="noreferrer" className="w-10 h-10 grid place-items-center rounded-full border hover:bg-black hover:text-white">x</a>
