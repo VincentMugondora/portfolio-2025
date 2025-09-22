@@ -9,7 +9,7 @@ export default function Home() {
         style={{
           backgroundImage:
             'linear-gradient(to right, rgba(0,0,0,.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,.04) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
+          backgroundSize: '64px 64px',
           backgroundPosition: 'center',
         }}
       />
@@ -91,17 +91,17 @@ export default function Home() {
           />
 
           {/* Floating CTA */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 bg-white border-4 md:border-6 border-black rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-2 p-1.5 md:p-2.5">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-30 bg-white border-4 md:border-8 border-black rounded-full shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex gap-2 p-1.5 md:p-3">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 rounded-full px-6 md:px-7 py-3 md:py-3 text-base md:text-lg font-semibold bg-black text-white hover:bg-gray-900"
+              className="inline-flex items-center gap-3 rounded-full px-7 md:px-8 py-3 md:py-3.5 text-base md:text-xl font-semibold bg-black text-white hover:bg-gray-900"
             >
               <span>Portfolio</span>
-              <span className="inline-block w-2 h-2 rounded-full bg-orange-500" />
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-orange-500 text-white text-xs font-bold">+</span>
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center rounded-full px-6 md:px-7 py-3 md:py-3 text-base md:text-lg font-semibold bg-white text-gray-900 hover:bg-gray-50"
+              className="inline-flex items-center rounded-full px-7 md:px-8 py-3 md:py-3.5 text-base md:text-xl font-semibold bg-white text-gray-900 hover:bg-gray-50"
             >
               Hire Me
             </Link>
@@ -135,8 +135,8 @@ export default function Home() {
       </div>
 
       {/* Bottom skills strip (full-width, pinned to hero bottom) */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-4 md:px-8 z-10">
-        <div className="mx-auto max-w-none bg-black text-white rounded-full px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-10">
+        <div className="mx-auto max-w-none bg-black text-white rounded-none px-6 md:px-10 py-3 md:py-4 flex items-center justify-center gap-8 md:gap-12">
           <span className="whitespace-nowrap">Website Design</span>
           <span className="text-orange-500">✦</span>
           <span className="whitespace-nowrap">Dashboard</span>
