@@ -13,7 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900 overflow-x-hidden">
       <Navbar />
       <main className="flex-1 container mx-auto px-4 py-4 md:py-6">
         <Routes>

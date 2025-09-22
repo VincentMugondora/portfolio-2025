@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="relative pt-2 md:pt-4 pb-10 md:pb-12">
+    <section className="relative overflow-x-hidden pt-2 md:pt-4 pb-10 md:pb-12">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 -z-10"
@@ -134,9 +134,9 @@ export default function Home() {
       </div>
 
       {/* Bottom skills strip (full-width pinned, infinite auto-scroll) */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-screen px-0 z-20">
-        <div className="mx-auto max-w-none bg-black text-white rounded-none">
-          <div className="marquee overflow-hidden">
+      <div className="absolute left-0 right-0 bottom-0 z-20">
+        <div className="w-full bg-black text-white rounded-none">
+          <div className="marquee w-full overflow-hidden">
             <div className="flex items-center gap-12 md:gap-16 py-3 md:py-4 px-6 md:px-10 whitespace-nowrap animate-marquee text-lg md:text-xl font-bold">
               {/* Sequence A */}
               <div className="flex items-center gap-12 md:gap-16">
