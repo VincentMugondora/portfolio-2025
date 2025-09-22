@@ -88,7 +88,7 @@ export default function Home() {
 
           {/* Portrait (placeholder) */}
           <img
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=800&auto=format&fit=crop"
+            src="/avatar.png"
             alt="Portrait"
             className="relative z-10 w-64 md:w-80 lg:w-96 drop-shadow-xl"
             loading="lazy"
