@@ -11,7 +11,8 @@ function ensureDir(dir) {
 }
 
 function createStorage(subfolder) {
-  const dest = path.join(__dirname, '..', 'uploads', subfolder);
+  // Save under server/uploads/<subfolder> (two levels up from src/middleware)
+  const dest = path.join(__dirname, '..', '..', 'uploads', subfolder);
   ensureDir(dest);
   return multer.diskStorage({
     destination: (_req, _file, cb) => cb(null, dest),
@@ -30,3 +31,4 @@ export const uploadCertificate = multer({
   },
   limits: { fileSize: 10 * 1024 * 1024 },
 });
+
