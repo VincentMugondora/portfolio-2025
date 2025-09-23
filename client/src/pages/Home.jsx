@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import Services from '../components/Services.jsx'
 
 export default function Home() {
   return (
+    <>
     <section className="relative pt-2 md:pt-4 pb-10 md:pb-12 min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)]">
       {/* Subtle grid background */}
       <div
@@ -200,6 +202,8 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <Services />
+    </>
   )
 }
 
