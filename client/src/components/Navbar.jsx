@@ -9,6 +9,9 @@ const navItemClass = ({ isActive }) =>
     .join(' ')
 
 export default function Navbar() {
+  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null
+  const adminTo = token ? '/admin' : '/admin/login'
+  const adminText = token ? 'Dashboard' : 'Admin'
   return (
     <>
     <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
@@ -45,6 +48,12 @@ export default function Navbar() {
 
           {/* Right CTA */}
           <div className="flex items-center gap-2">
+            <NavLink
+              to={adminTo}
+              className="inline-flex items-center rounded-full border border-gray-300 text-gray-800 px-3 py-1.5 hover:bg-gray-100"
+            >
+              {adminText}
+            </NavLink>
             <NavLink
               to="/contact"
               className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 hover:bg-gray-900 shadow-inner"
