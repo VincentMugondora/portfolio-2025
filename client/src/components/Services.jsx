@@ -1,23 +1,23 @@
 import { useState } from 'react'
 
 const services = [
-  { id: 1, title: 'UI/UX Design' },
+  { id: 1, title: 'Frontend Development' },
   {
     id: 2,
-    title: 'Application Design',
+    title: 'Full‑Stack Applications',
     tags: [
-      'Cross-Platform App Design',
-      'Progressive Web App',
-      'Wireframing and Prototyping',
-      'Custom App Theme Design',
+      'React & Next.js',
+      'Node.js & Express',
+      'REST & GraphQL APIs',
+      'Testing & CI/CD',
     ],
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+      'I build production‑ready web applications end‑to‑end: responsive React/Next.js frontends, secure Node.js/Express backends, and robust REST/GraphQL APIs with automated testing and CI/CD.',
     image: '/avatar.png',
   },
-  { id: 3, title: 'Website Design' },
-  { id: 4, title: 'UI Design' },
-  { id: 5, title: 'Design System' },
+  { id: 3, title: 'Backend Development' },
+  { id: 4, title: 'API Development' },
+  { id: 5, title: 'DevOps & CI/CD' },
 ]
 
 function Num({ n }) {
