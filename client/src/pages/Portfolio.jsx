@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
+import Certificates from './Certificates.jsx'
 
 export default function Portfolio() {
   return (
