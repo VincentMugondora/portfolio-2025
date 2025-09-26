@@ -115,68 +115,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Connect & Chat section (moved to last) */}
-      <section className="relative pb-16">
-        <div className="container mx-auto px-4">
-          <div className="rounded-[28px] bg-gray-100 p-4 md:p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              {/* Left: white panel with heading + email */}
-              <div className="lg:col-span-5">
-                <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm h-full flex flex-col">
-                  <h3 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-700">
-                    Let’s connect
-                    <br />
-                    and chat
-                  </h3>
-                  <a
-                    href="mailto:hello@cozy.com"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 hover:bg-gray-200 w-fit"
-                  >
-                    HELLO@COZY.COM
-                    <span className="grid h-6 w-6 place-items-center rounded-full bg-gray-900 text-white">
-                      <FiArrowUpRight className="h-4 w-4" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Right: teal panel with floating pills */}
-              <div className="lg:col-span-7">
-                <div className="relative rounded-2xl bg-[#79c8cf] p-6 aspect-[16/9] overflow-hidden">
-                  <div className="absolute inset-0">
-                    <span className="absolute left-[24%] top-[20%] -rotate-2 inline-flex items-center rounded-full border border-white/80 text-white/95 px-5 py-2 text-sm font-semibold shadow-sm">
-                      FOLLOW ME! <span className="ml-2">👀✨</span>
-                    </span>
-                    <span className="absolute left-[12%] top-[44%] rotate-2 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      INSTAGRAM
-                    </span>
-                    <span className="absolute right-[12%] top-[42%] -rotate-3 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      DRIBBBBLE
-                    </span>
-                    <span className="absolute left-[18%] bottom-[18%] -rotate-6 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      BEHANCE
-                    </span>
-                    <span className="absolute right-[16%] bottom-[16%] rotate-3 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      LINKEDIN
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer rail */}
-            <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-gray-500">
-                <span className="grid h-6 w-6 place-items-center rounded-full border border-gray-400 text-gray-600">C</span>
-                <span className="font-semibold tracking-wide">COZYDIADORA</span>
-              </div>
-              <div className="text-gray-500">©2024</div>
-              <Link to="/contact" className="inline-flex items-center rounded-full bg-gray-300 text-gray-800 px-4 py-2 text-sm hover:bg-gray-400">Book a call</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission + Assist section */}
       <section className="relative pb-14 md:pb-16">
         <div className="container mx-auto px-4">
@@ -437,7 +375,7 @@ export default function Home() {
                     href="mailto:hello@cozy.com"
                     className="mt-6 inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 hover:bg-gray-200 w-fit"
                   >
-                    HELLO@COZY.COM
+                    vincent@uncommon.org
                     <span className="grid h-6 w-6 place-items-center rounded-full bg-gray-900 text-white">
                       <FiArrowUpRight className="h-4 w-4" />
                     </span>
@@ -467,16 +405,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Footer rail */}
-            <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-gray-500">
-                <span className="grid h-6 w-6 place-items-center rounded-full border border-gray-400 text-gray-600">C</span>
-                <span className="font-semibold tracking-wide">COZYDIADORA</span>
-              </div>
-              <div className="text-gray-500">©2024</div>
-              <Link to="/contact" className="inline-flex items-center rounded-full bg-gray-300 text-gray-800 px-4 py-2 text-sm hover:bg-gray-400">Book a call</Link>
             </div>
           </div>
         </div>
@@ -539,68 +467,6 @@ export default function Home() {
               {submitted && <div className="mt-3 text-center text-green-700">Thanks! Your message has been sent.</div>}
               {error && !submitted && <div className="mt-3 text-center text-red-600">{error}</div>}
             </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Connect & Chat section */}
-      <section className="relative pb-16">
-        <div className="container mx-auto px-4">
-          <div className="rounded-[28px] bg-gray-100 p-4 md:p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              {/* Left: white panel with heading + email */}
-              <div className="lg:col-span-5">
-                <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm h-full flex flex-col">
-                  <h3 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-700">
-                    Let’s connect
-                    <br />
-                    and chat
-                  </h3>
-                  <a
-                    href="mailto:hello@cozy.com"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-800 ring-1 ring-gray-200 hover:bg-gray-200 w-fit"
-                  >
-                    HELLO@COZY.COM
-                    <span className="grid h-6 w-6 place-items-center rounded-full bg-gray-900 text-white">
-                      <FiArrowUpRight className="h-4 w-4" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Right: teal panel with floating pills */}
-              <div className="lg:col-span-7">
-                <div className="relative rounded-2xl bg-[#79c8cf] p-6 aspect-[16/9] overflow-hidden">
-                  <div className="absolute inset-0">
-                    <span className="absolute left-[24%] top-[20%] -rotate-2 inline-flex items-center rounded-full border border-white/80 text-white/95 px-5 py-2 text-sm font-semibold shadow-sm">
-                      FOLLOW ME! <span className="ml-2">👀✨</span>
-                    </span>
-                    <span className="absolute left-[12%] top-[44%] rotate-2 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      INSTAGRAM
-                    </span>
-                    <span className="absolute right-[12%] top-[42%] -rotate-3 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      DRIBBBBLE
-                    </span>
-                    <span className="absolute left-[18%] bottom-[18%] -rotate-6 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      BEHANCE
-                    </span>
-                    <span className="absolute right-[16%] bottom-[16%] rotate-3 inline-flex items-center rounded-full border border-white/80 text-white/95 px-6 py-2 text-sm font-semibold shadow-sm">
-                      LINKEDIN
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer rail */}
-            <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-gray-500">
-                <span className="grid h-6 w-6 place-items-center rounded-full border border-gray-400 text-gray-600">C</span>
-                <span className="font-semibold tracking-wide">COZYDIADORA</span>
-              </div>
-              <div className="text-gray-500">©2024</div>
-              <Link to="/contact" className="inline-flex items-center rounded-full bg-gray-300 text-gray-800 px-4 py-2 text-sm hover:bg-gray-400">Book a call</Link>
-            </div>
           </div>
         </div>
       </section>
