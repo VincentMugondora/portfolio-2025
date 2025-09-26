@@ -146,13 +146,127 @@ export default function Home() {
                     <div className="font-semibold">{s.title}</div>
                   </div>
                   <div className="absolute right-4 bottom-4 text-gray-400 font-semibold">{s.k}</div>
+        </div>
+      </section>
+
+      {/* Selected Work section */}
+      <section className="relative pb-16">
+        <div className="container mx-auto px-4">
+          <div className="rounded-[28px] bg-gray-100 p-4 md:p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              {/* Left rail */}
+              <div className="lg:col-span-3">
+                <h2 className="text-3xl md:text-4xl font-bold">Selected<br/>work</h2>
+                <div className="mt-4">
+                  <Link to="/projects" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">See All</Link>
                 </div>
-              ))}
+              </div>
+
+              {/* Right content */}
+              <div className="lg:col-span-9 space-y-6">
+                {/* Data */}
+                {(() => {
+                  const works = [
+                    {
+                      id: 1,
+                      title: 'Digital Agency',
+                      year: 2021,
+                      tags: ['UI DESIGN', 'MOBILE DEV'],
+                      image: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1600&auto=format&fit=crop',
+                      featured: true,
+                    },
+                    {
+                      id: 2,
+                      title: 'Zenpoint',
+                      year: 2024,
+                      tags: ['UI DESIGN', 'WEB DEV'],
+                      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop',
+                    },
+                    {
+                      id: 3,
+                      title: 'PayU',
+                      year: 2024,
+                      tags: ['UI DESIGN', 'WEB DEV'],
+                      image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=1600&auto=format&fit=crop',
+                    },
+                    {
+                      id: 4,
+                      title: 'CompAI',
+                      year: 2024,
+                      tags: ['UI DESIGN', 'MOBILE DEV', 'WEB DEV'],
+                      image: 'https://images.unsplash.com/photo-1551817958-20204d6ab674?q=80&w=1600&auto=format&fit=crop',
+                    },
+                    {
+                      id: 5,
+                      title: 'ChatPic.AI',
+                      year: 2024,
+                      tags: ['UI DESIGN', 'MOBILE DEV'],
+                      image: 'https://images.unsplash.com/photo-1551817958-4065b8b71f63?q=80&w=1600&auto=format&fit=crop',
+                    },
+                  ]
+
+                  const FeatureCard = ({ item }) => (
+                    <div className="rounded-[28px] bg-white border border-gray-200 shadow-sm overflow-hidden">
+                      <div className="aspect-[16/9] w-full overflow-hidden">
+                        <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+                      </div>
+                      <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3">
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <span className="font-semibold tracking-wide">{item.title.toUpperCase()}</span>
+                          <span className="font-semibold">{item.year}</span>
+                        </div>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {item.tags.map((t) => (
+                            <span key={t} className="inline-flex items-center rounded-full bg-white text-gray-700 border px-3 py-1 text-[11px] shadow-sm">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )
+
+                  const Card = ({ item }) => (
+                    <div className="rounded-[24px] bg-white border border-gray-200 shadow-sm overflow-hidden">
+                      <div className="aspect-[16/10] w-full overflow-hidden">
+                        <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+                      </div>
+                      <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3">
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <span className="font-semibold tracking-wide">{item.title.toUpperCase()}</span>
+                          <span className="font-semibold">{item.year}</span>
+                        </div>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {item.tags.map((t) => (
+                            <span key={t} className="inline-flex items-center rounded-full bg-white text-gray-700 border px-3 py-1 text-[11px] shadow-sm">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )
+
+                  const featured = works.find((w) => w.featured)
+                  const rest = works.filter((w) => !w.featured)
+
+                  return (
+                    <>
+                      {featured && <FeatureCard item={featured} />}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {rest.map((w) => (
+                          <Card key={w.id} item={w} />
+                        ))}
+                      </div>
+                    </>
+                  )
+                })()}
+              </div>
             </div>
           </div>
         </div>
       </section>
+
     </>
   )
 }
-
