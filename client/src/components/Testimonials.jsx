@@ -9,11 +9,11 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Munyaradzi Mamu',
+    name: 'Ross Schibbler',
     role: 'Product Manager, SaaS',
     quote:
       'He took our ambiguous requirements and delivered a production‑ready web app with CI/CD, tests, and clear documentation.',
-    image: '/testimonials/team-16.webp',
+    image: '/testimonials/ross.jpg',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: 'dominic mhiripiri',
+    name: 'Dominic Mhiripiri',
     role: 'Founder, Agency',
     quote:
       'Frontend polish + backend robustness. He handled everything from API design to pixel‑perfect UI states.',
@@ -41,7 +41,7 @@ const testimonials = [
   },
   {
     id: 6,
-    name: 'Ross Schibbler',
+    name: 'Diana Dumbu',
     role: 'Ops Lead',
     quote:
       'Our cloud costs went down and reliability went up. Monitoring, alerts, and pipelines — all set up right.',
@@ -59,22 +59,37 @@ export default function Testimonials() {
             <h2 className="text-2xl md:text-3xl font-bold">What clients say</h2>
           </div>
 
-          {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.id} className="rounded-2xl bg-white border border-gray-200 shadow-sm p-5">
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                    <img src={t.image} alt={t.name} className="h-full w-full object-cover" loading="lazy" />
+          {/* Infinite carousel */}
+          <div className="group relative overflow-hidden">
+            <div
+              className="track flex items-stretch gap-4 md:gap-6 w-max"
+              style={{ animation: 'marquee 28s linear infinite' }}
+            >
+              {[...testimonials, ...testimonials].map((t, idx) => (
+                <div
+                  key={`${t.id}-${idx}`}
+                  className="rounded-2xl bg-white border border-gray-200 shadow-sm p-5 min-w-[320px] max-w-[360px]"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-100">
+                      <img src={t.image} alt={t.name} className="h-full w-full object-cover" loading="lazy" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900">{t.name}</div>
+                      <div className="text-xs text-gray-500">{t.role}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">{t.name}</div>
-                    <div className="text-xs text-gray-500">{t.role}</div>
-                  </div>
+                  <p className="mt-3 text-sm text-gray-700 leading-relaxed">“{t.quote}”</p>
                 </div>
-                <p className="mt-3 text-sm text-gray-700 leading-relaxed">“{t.quote}”</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <style>{`
+              .group:hover .track { animation-play-state: paused; }
+              @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+            `}</style>
           </div>
         </div>
       </div>
