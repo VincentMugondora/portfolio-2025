@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import ServicesPage from './pages/Services.jsx'
+import Portfolio from './pages/Portfolio.jsx'
 import Projects from './pages/Projects.jsx'
 import Certificates from './pages/Certificates.jsx'
 import Skills from './pages/Skills.jsx'
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/skills" element={<Skills />} />
