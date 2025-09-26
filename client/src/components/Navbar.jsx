@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 const linkClass = 'px-2.5 py-1.5 text-xs md:text-sm text-gray-700 hover:text-black'
  
 export default function Navbar() {
+  return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
         <div className="container mx-auto px-4 py-2 md:py-3">
@@ -38,6 +39,7 @@ export default function Navbar() {
       </header>
       {/* Spacer to offset fixed header height */}
       <div aria-hidden="true" className="h-16 md:h-20" />
+    </>
   )
 }
 
