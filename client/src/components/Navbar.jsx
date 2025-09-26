@@ -10,7 +10,6 @@ export default function Navbar() {
           <div className="w-full flex items-center justify-between rounded-[20px] ring-1 ring-gray-200 ring-inset bg-white px-3 py-2 md:px-5 md:py-3 shadow-sm">
             {/* Brand */}
             <div className="flex items-center gap-2">
-              <div className="grid h-8 w-8 place-items-center rounded-full border border-gray-300 text-gray-900 font-bold">V</div>
                 Vincent Mugondora
               </NavLink>
             </div>
@@ -18,7 +17,7 @@ export default function Navbar() {
             {/* Center nav */}
             <nav className="hidden md:flex items-center gap-2 sm:gap-3">
               <NavLink to="/about" className={linkClass}>About</NavLink>
-              <NavLink to="/services" className={linkClass}>Services</NavLink>
+              <NavLink to="/services/new" className={linkClass}>Services</NavLink>
               <NavLink to="/projects" className={linkClass}>Portfolio</NavLink>
               <a href="/#blog" className={linkClass}>Blog</a>
               <NavLink to="/contact" className={linkClass}>Contact</NavLink>
@@ -28,7 +27,6 @@ export default function Navbar() {
             <div className="flex items-center">
               <NavLink
                 to="/contact"
-              >
                 Book a call
               </NavLink>
             </div>
