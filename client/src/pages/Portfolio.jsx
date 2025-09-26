@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
 import Certificates from './Certificates.jsx'
 
 export default function Portfolio() {
+  const [tab, setTab] = useState('projects')
   return (
     <>
       {/* Hero */}
@@ -28,24 +30,33 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects section */}
-      <section className="relative pb-10 md:pb-12">
+      {/* Tabs */}
+      <section className="relative pb-6">
         <div className="container mx-auto px-4">
-          <Projects />
+          <div className="flex flex-wrap gap-2">
+            {[
+              ['projects', 'Projects'],
+              ['certificates', 'Certificates'],
+              ['skills', 'Skills'],
+            ].map(([key, label]) => (
+              <button
+                key={key}
+                onClick={() => setTab(key)}
+                className={`px-3 py-1.5 rounded-full ring-1 ${tab === key ? 'bg-black text-white ring-black' : 'bg-white text-gray-800 ring-gray-200 hover:bg-gray-50'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Certificates section */}
+      {/* Tab content */}
       <section className="relative pb-16">
         <div className="container mx-auto px-4">
-          <Certificates />
-        </div>
-      </section>
-
-      {/* Skills section */}
-      <section className="relative pb-16">
-        <div className="container mx-auto px-4">
-          <Skills />
+          {tab === 'projects' && <Projects />}
+          {tab === 'certificates' && <Certificates />}
+          {tab === 'skills' && <Skills />}
         </div>
       </section>
     </>
