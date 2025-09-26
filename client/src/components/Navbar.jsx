@@ -11,20 +11,19 @@ export default function Navbar() {
           {/* Brand */}
           <div className="flex items-center gap-2">
             <div className="grid h-8 w-8 place-items-center rounded-full border border-gray-300 text-gray-900 font-bold">V</div>
-            <NavLink to="/" className="text-[12px] md:text-sm font-semibold tracking-widest text-gray-700 uppercase">
               Vincent Mugondora
             </NavLink>
           </div>
 
           {/* Center nav */}
           <nav className="hidden md:flex items-center gap-2 sm:gap-3">
-            <a href="/#about" className={linkClass}>About</a>
+            <NavLink to="/about" className={linkClass}>About</NavLink>
             <a href="/#services" className={linkClass}>Services</a>
             <NavLink to="/projects" className={linkClass}>Portfolio</NavLink>
             <a href="/#blog" className={linkClass}>Blog</a>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
           </nav>
-
+{{ ... }}
           {/* Right CTA */}
           <div className="flex items-center">
             <NavLink
