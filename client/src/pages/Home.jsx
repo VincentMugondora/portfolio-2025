@@ -4,7 +4,7 @@ import Services from '../components/Services.jsx'
 export default function Home() {
   return (
     <>
-      <section className="relative py-10 md:py-14">
+      <section className="relative pt-6 md:pt-8 pb-10 md:pb-12">
         <div className="container mx-auto px-4">
           <div className="rounded-2xl bg-gray-100 p-4 md:p-8 lg:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -15,10 +15,10 @@ export default function Home() {
                   AVAILABLE FOR WORK
                 </span>
                 <h1 className="mt-4 text-5xl leading-[1.05] font-extrabold tracking-tight md:text-7xl">
-                  Hi, I’m a<br />product<br />designer<span className="align-top">©</span>
+                  Hi, I’m a<br />full‑stack<br />developer<span className="align-top">©</span>
                 </h1>
                 <p className="mt-5 max-w-md text-gray-600">
-                  I have 11+ years of experience working on useful and mindful products together with startups and known brands.
+                  I craft fast, accessible web apps with React, Node.js, and MongoDB — from idea to production.
                 </p>
                 <div className="mt-7">
                   <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-5 py-2.5 text-sm hover:bg-gray-900">
@@ -30,13 +30,13 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 md:gap-6">
                 {/* Info card */}
                 <div className="rounded-2xl bg-white p-4 shadow-sm">
-                  <div className="text-sm font-semibold">Cozydiadora</div>
-                  <div className="text-xs text-gray-500">Jakarta, Indonesia</div>
+                  <div className="text-sm font-semibold">Vincent Mugondora</div>
+                  <div className="text-xs text-gray-500">Harare, Zimbabwe</div>
                   <div className="mt-3 aspect-[4/3] rounded-lg bg-gray-100 overflow-hidden" />
                   <div className="mt-3 flex items-center justify-between text-xs">
                     <div className="inline-flex items-center gap-1 text-gray-700">
-                      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-black text-white text-[10px]">F</span>
-                      FRAMER EXPERT
+                      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-black text-white text-[10px]">FS</span>
+                      FULL‑STACK EXPERT
                     </div>
                     <div className="text-sky-600 font-semibold">$150 – $300/HR</div>
                   </div>
@@ -46,7 +46,7 @@ export default function Home() {
                   <img src="/avatar.png" alt="Portrait" className="h-full w-full object-cover" loading="lazy" />
                 </div>
                 {/* Gradient brands card */}
-                <div className="col-span-2 relative rounded-2xl p-4 md:p-5" style={{background:'linear-gradient(135deg,#a78bfa 0%, #60a5fa 40%, #8b5cf6 100%)'}}>
+                <div className="col-span-2 relative rounded-2xl p-4 md:p-5" style={{background:'linear-gradient(135deg,#93c5fd 0%, #60a5fa 40%, #1d4ed8 100%)'}}>
                   <div className="text-white/90 text-sm">The most recent brands<br/>I happily worked with &lt;3</div>
                   <div className="mt-3 flex flex-wrap items-center gap-4 text-white/90 font-semibold">
                     <span>Squarespace</span>
