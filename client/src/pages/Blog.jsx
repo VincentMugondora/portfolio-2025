@@ -1,37 +1,5 @@
 import { Link } from 'react-router-dom'
-
-const posts = [
-  {
-    id: 1,
-    title: 'Shipping ML features in full‑stack apps',
-    date: 'Sep 2025',
-    excerpt:
-      'A practical checklist to take ML from notebook to production: APIs, monitoring, and UX details that matter.',
-    image:
-      'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop',
-    tags: ['ML', 'Backend', 'MLOps'],
-  },
-  {
-    id: 2,
-    title: 'React patterns I use for speed and reliability',
-    date: 'Aug 2025',
-    excerpt:
-      'State, data‑fetching, and testing patterns that keep UI code simple, testable, and fast to ship.',
-    image:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop',
-    tags: ['Frontend', 'React'],
-  },
-  {
-    id: 3,
-    title: 'From prototype to product: a CI/CD setup that sticks',
-    date: 'Jul 2025',
-    excerpt:
-      'A minimal CI/CD pipeline that scales from a single repo to a team. Linting, tests, builds, and previews.',
-    image:
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop',
-    tags: ['DevOps', 'CI/CD'],
-  },
-]
+import { posts } from '../data/blog.js'
 
 export default function Blog() {
   return (
@@ -77,7 +45,7 @@ export default function Blog() {
                   <h2 className="mt-2 text-lg font-semibold">{p.title}</h2>
                   <p className="mt-2 text-sm text-gray-600 flex-1">{p.excerpt}</p>
                   <div className="mt-3">
-                    <a href="#" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">Read more</a>
+                    <Link to={`/blog/${p.slug}`} className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">Read more</Link>
                   </div>
                 </div>
               </article>

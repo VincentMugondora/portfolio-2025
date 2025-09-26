@@ -7,6 +7,7 @@ import About from './pages/About.jsx'
 import ServicesPage from './pages/Services.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Blog from './pages/Blog.jsx'
+import BlogPost from './pages/BlogPost.jsx'
 import Projects from './pages/Projects.jsx'
 import Certificates from './pages/Certificates.jsx'
 import Skills from './pages/Skills.jsx'
@@ -26,6 +27,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/skills" element={<Skills />} />
