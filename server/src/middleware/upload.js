@@ -32,3 +32,14 @@ export const uploadCertificate = multer({
   limits: { fileSize: 10 * 1024 * 1024 },
 });
 
+// Generic file upload (used by /api/uploads). Stores under uploads/files
+export const uploadFile = multer({
+  storage: createStorage('files'),
+  fileFilter: (_req, file, cb) => {
+    if (file.mimetype.startsWith('image/') || file.mimetype === 'application/pdf') cb(null, true);
+    else cb(new Error('Only PNG/JPEG/WEBP images or PDF are allowed'));
+  },
+  // Allow up to 20MB to accommodate PDFs; image-specific 10MB check is done in controller level
+  limits: { fileSize: 20 * 1024 * 1024 },
+});
+
