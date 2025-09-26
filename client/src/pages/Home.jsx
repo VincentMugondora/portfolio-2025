@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FiLinkedin, FiGithub, FiInstagram, FiTwitter } from 'react-icons/fi'
-import Services from '../components/Services.jsx'
+import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiPenTool, FiCode, FiImage, FiType } from 'react-icons/fi'
 
 export default function Home() {
   return (
@@ -75,7 +74,82 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Services />
+
+      {/* Mission + Assist section */}
+      <section className="relative pb-14 md:pb-16">
+        <div className="container mx-auto px-4">
+          {/* Mission banner */}
+          <div className="rounded-[30px] text-white p-6 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.08)]" style={{background:'linear-gradient(180deg,#1497A4 0%, #0F8E9B 100%)'}}>
+            <p className="text-2xl md:text-4xl font-semibold leading-snug max-w-5xl">
+              My mission is to assist startups and enterprises in creating an emotional bond between their products and
+              satisfied, engaged customers.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-white/70">
+              {['Jeep','amazon','bitcoin','HubSpot','stripe','Google'].map((b) => (
+                <span key={b} className="text-sm md:text-base font-semibold tracking-wider">
+                  {b}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Assist grid */}
+          <div className="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                How Can I
+                <br />
+                Assist You?
+              </h2>
+            </div>
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {[
+                {
+                  k: '01',
+                  title: 'UI Design',
+                  desc:
+                    'We create intuitive, visually appealing interfaces that enhance user experience and navigation, ensuring your app is both beautiful and functional across all devices.',
+                  icon: FiPenTool,
+                },
+                {
+                  k: '02',
+                  title: 'Development',
+                  desc:
+                    'Our team builds reliable, scalable solutions, delivering clean code that powers websites and mobile apps with top‑notch performance and security.',
+                  icon: FiCode,
+                },
+                {
+                  k: '03',
+                  title: 'Graphic Design',
+                  desc:
+                    'We design responsive, user‑friendly websites that blend aesthetics with functionality, providing a seamless experience across devices and reflecting your brand’s identity.',
+                  icon: FiImage,
+                },
+                {
+                  k: '04',
+                  title: 'Branding',
+                  desc:
+                    'We craft memorable brand identities, from logos to complete strategies, ensuring consistency and a strong connection with your audience across all platforms.',
+                  icon: FiType,
+                },
+              ].map((s) => (
+                <div key={s.k} className="relative rounded-[22px] bg-white p-4 md:p-5 border border-gray-100 shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
+                  <div className="flex items-start gap-3">
+                    <span className="grid h-9 w-9 place-items-center rounded-full bg-indigo-50 text-indigo-600">
+                      {s.icon ? <s.icon className="h-4 w-4" /> : null}
+                    </span>
+                    <p className="text-sm text-gray-600">{s.desc}</p>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between pr-10">
+                    <div className="font-semibold">{s.title}</div>
+                  </div>
+                  <div className="absolute right-4 bottom-4 text-gray-400 font-semibold">{s.k}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
