@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FiBriefcase, FiGlobe, FiTrendingUp } from 'react-icons/fi'
 import Services from '../components/Services.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 
 export default function About() {
   return (
@@ -106,6 +107,9 @@ export default function About() {
       <div id="services">
         <Services />
       </div>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* CTA */}
       <section className="relative pb-16">

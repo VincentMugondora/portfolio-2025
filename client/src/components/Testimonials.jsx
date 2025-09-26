@@ -1,7 +1,7 @@
 const testimonials = [
   {
     id: 1,
-    name: 'Client A',
+    name: 'Elisha Urombo',
     role: 'Founder, Startup',
     quote:
       'Vincent shipped our MVP twice as fast as planned and the quality exceeded expectations. Clean code, thoughtful UX, and great communication.',
@@ -9,7 +9,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Client B',
+    name: 'Munyaradzi Mamu',
     role: 'Product Manager, SaaS',
     quote:
       'He took our ambiguous requirements and delivered a production‑ready web app with CI/CD, tests, and clear documentation.',
@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Client C',
+    name: 'Rachel Bulombo',
     role: 'CTO, Fintech',
     quote:
       'Solid full‑stack engineering with strong ML understanding. We integrated model features without slowing delivery.',
@@ -25,7 +25,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: 'Client D',
+    name: 'Samuel Zana',
     role: 'Lead Engineer',
     quote:
       'Excellent collaborator. Pragmatic technical decisions, great testing practices, and reliable delivery cadence.',
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: 'Client E',
+    name: 'dominic mhiripiri',
     role: 'Founder, Agency',
     quote:
       'Frontend polish + backend robustness. He handled everything from API design to pixel‑perfect UI states.',
@@ -41,7 +41,7 @@ const testimonials = [
   },
   {
     id: 6,
-    name: 'Client F',
+    name: 'Ross Schibbler',
     role: 'Ops Lead',
     quote:
       'Our cloud costs went down and reliability went up. Monitoring, alerts, and pipelines — all set up right.',
