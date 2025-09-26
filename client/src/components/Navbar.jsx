@@ -54,6 +54,15 @@ export default function Navbar() {
             >
               {adminText}
             </NavLink>
+            <a
+              href="/cv/Vincent_Mugondora_CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="hidden sm:inline-flex items-center rounded-full border border-gray-300 text-gray-800 px-3 py-1.5 hover:bg-gray-100"
+            >
+              Download CV
+            </a>
             <NavLink
               to="/contact"
               className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 hover:bg-gray-900 shadow-inner"
