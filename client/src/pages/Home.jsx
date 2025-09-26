@@ -46,7 +46,7 @@ export default function Home() {
                   <img src="/avatar.png" alt="Portrait" className="h-full w-full object-cover" loading="lazy" />
                 </div>
                 {/* Gradient brands card */}
-                <div className="col-span-2 relative rounded-2xl p-4 md:p-5" style={{background:'linear-gradient(135deg,#93c5fd 0%, #60a5fa 40%, #1d4ed8 100%)'}}>
+                <div className="col-span-2 relative rounded-2xl p-4 md:p-5 overflow-hidden pr-16 md:pr-20" style={{background:'linear-gradient(135deg,#93c5fd 0%, #60a5fa 40%, #1d4ed8 100%)'}}>
                   <div className="text-white/90 text-sm">Recent tools & platforms I build with</div>
                   <div className="mt-3 flex flex-wrap items-center gap-4 text-white/90 font-semibold">
                     <span>AWS</span>
@@ -57,7 +57,7 @@ export default function Home() {
                     <span>Node.js</span>
                   </div>
                   {/* Social icons rail */}
-                  <div className="hidden md:flex flex-col gap-3 absolute right-[-18px] top-1/2 -translate-y-1/2">
+                  <div className="hidden md:flex flex-col gap-3 absolute right-4 top-1/2 -translate-y-1/2">
                     <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white">
                       <FiLinkedin className="h-4 w-4" />
                     </a>
