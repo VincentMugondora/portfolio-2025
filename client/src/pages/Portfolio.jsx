@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
+import Certificates from './Certificates.jsx'
 
 export default function Portfolio() {
   return (
@@ -38,6 +39,13 @@ export default function Portfolio() {
       <section className="relative pb-16">
         <div className="container mx-auto px-4">
           <Skills />
+        </div>
+      </section>
+
+      {/* Certificates section */}
+      <section className="relative pb-16">
+        <div className="container mx-auto px-4">
+          <Certificates />
         </div>
       </section>
     </>

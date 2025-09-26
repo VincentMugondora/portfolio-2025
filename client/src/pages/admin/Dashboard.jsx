@@ -5,9 +5,9 @@ import { uploadUrl } from '../../lib/url'
 
 function Section({ title, children, actions }) {
   return (
-    <section className="bg-white border rounded p-4">
+    <section className="rounded-2xl bg-white p-5 md:p-6 shadow-sm border border-gray-100">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-lg font-bold">{title}</h2>
         {actions}
       </div>
       {children}
@@ -87,7 +87,7 @@ function ProjectsManager() {
           <input name="demoUrl" value={form.demoUrl} onChange={onChange} className="w-full border rounded px-3 py-2" />
         </div>
         <div className="md:col-span-2">
-          <button className="inline-flex items-center rounded bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Add Project</button>
+          <button className="inline-flex items-center rounded-full bg-black text-white px-5 py-2 text-sm hover:bg-gray-900">Add Project</button>
         </div>
       </form>
       {error && <p className="text-red-600 mb-4">{error}</p>}
@@ -180,7 +180,7 @@ function SkillsManager() {
           <input name="category" value={form.category} onChange={onChange} className="w-full border rounded px-3 py-2" />
         </div>
         <div className="md:col-span-3">
-          <button className="inline-flex items-center rounded bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Add Skill</button>
+          <button className="inline-flex items-center rounded-full bg-black text-white px-5 py-2 text-sm hover:bg-gray-900">Add Skill</button>
         </div>
       </form>
       {error && <p className="text-red-600 mb-4">{error}</p>}
@@ -264,7 +264,7 @@ function CertificatesManager() {
           <textarea name="description" value={form.description} onChange={onChange} rows={2} className="w-full border rounded px-3 py-2" />
         </div>
         <div className="md:col-span-3">
-          <button className="inline-flex items-center rounded bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Upload</button>
+          <button className="inline-flex items-center rounded-full bg-black text-white px-5 py-2 text-sm hover:bg-gray-900">Upload</button>
         </div>
       </form>
       {error && <p className="text-red-600 mb-4">{error}</p>}
@@ -380,38 +380,48 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-          {user && <p className="text-sm text-gray-600">Signed in as {user.username || user.email}</p>}
+    <section className="relative pt-6 md:pt-8 pb-12 md:pb-14">
+      <div className="container mx-auto px-4">
+        <div className="rounded-2xl bg-gray-100 p-4 md:p-8 lg:p-10">
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-gray-800 shadow">ADMIN</span>
+              <h1 className="mt-3 text-3xl md:text-4xl font-extrabold tracking-tight">Dashboard</h1>
+              {user && <p className="mt-1 text-sm text-gray-600">Signed in as {user.username || user.email}</p>}
+            </div>
+            <button
+              onClick={logout}
+              className="inline-flex items-center rounded-full bg-white text-gray-900 px-5 py-2 text-sm ring-1 ring-gray-200 hover:bg-gray-50"
+            >
+              Log out
+            </button>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              ['projects', 'Projects'],
+              ['skills', 'Skills'],
+              ['certs', 'Certificates'],
+              ['messages', 'Messages'],
+            ].map(([key, label]) => (
+              <button
+                key={key}
+                onClick={() => setTab(key)}
+                className={`px-3 py-1.5 rounded-full ring-1 ${tab === key ? 'bg-black text-white ring-black' : 'bg-white text-gray-800 ring-gray-200 hover:bg-gray-50'}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
-        <button onClick={logout} className="text-red-600 hover:underline">
-          Log out
-        </button>
-      </div>
 
-      <div className="flex gap-2">
-        {[
-          ['projects', 'Projects'],
-          ['skills', 'Skills'],
-          ['certs', 'Certificates'],
-          ['messages', 'Messages'],
-        ].map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setTab(key)}
-            className={`px-3 py-2 rounded border ${tab === key ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
-          >
-            {label}
-          </button>
-        ))}
+        <div className="mt-6 space-y-6">
+          {tab === 'projects' && <ProjectsManager />}
+          {tab === 'skills' && <SkillsManager />}
+          {tab === 'certs' && <CertificatesManager />}
+          {tab === 'messages' && <MessagesManager />}
+        </div>
       </div>
-
-      {tab === 'projects' && <ProjectsManager />}
-      {tab === 'skills' && <SkillsManager />}
-      {tab === 'certs' && <CertificatesManager />}
-      {tab === 'messages' && <MessagesManager />}
-    </div>
+    </section>
   )
 }
