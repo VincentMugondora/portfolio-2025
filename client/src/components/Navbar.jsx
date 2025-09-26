@@ -11,7 +11,6 @@ export default function Navbar() {
             {/* Brand */}
             <div className="flex items-center gap-2">
               <div className="grid h-8 w-8 place-items-center rounded-full border border-gray-300 text-gray-900 font-bold">V</div>
-              <NavLink to="/" className="text-[12px] md:text-sm font-semibold tracking-widest text-gray-700 uppercase">
                 Vincent Mugondora
               </NavLink>
             </div>
@@ -19,7 +18,7 @@ export default function Navbar() {
             {/* Center nav */}
             <nav className="hidden md:flex items-center gap-2 sm:gap-3">
               <NavLink to="/about" className={linkClass}>About</NavLink>
-              <a href="/about#services" className={linkClass}>Services</a>
+              <NavLink to="/services" className={linkClass}>Services</NavLink>
               <NavLink to="/projects" className={linkClass}>Portfolio</NavLink>
               <a href="/#blog" className={linkClass}>Blog</a>
               <NavLink to="/contact" className={linkClass}>Contact</NavLink>
@@ -29,7 +28,6 @@ export default function Navbar() {
             <div className="flex items-center">
               <NavLink
                 to="/contact"
-                className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 hover:bg-gray-900 shadow-inner"
               >
                 Book a call
               </NavLink>
