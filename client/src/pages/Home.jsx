@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FiLinkedin, FiGithub, FiInstagram, FiTwitter } from 'react-icons/fi'
 import Services from '../components/Services.jsx'
 
 export default function Home() {
@@ -55,9 +56,18 @@ export default function Home() {
                   </div>
                   {/* Social icons rail */}
                   <div className="hidden md:flex flex-col gap-3 absolute right-[-18px] top-1/2 -translate-y-1/2">
-                    {['in','li','p','x'].map((k) => (
-                      <span key={k} className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow">{k}</span>
-                    ))}
+                    <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white">
+                      <FiLinkedin className="h-4 w-4" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white">
+                      <FiGithub className="h-4 w-4" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white">
+                      <FiInstagram className="h-4 w-4" />
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white">
+                      <FiTwitter className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
