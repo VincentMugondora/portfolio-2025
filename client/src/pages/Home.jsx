@@ -146,6 +146,10 @@ export default function Home() {
                     <div className="font-semibold">{s.title}</div>
                   </div>
                   <div className="absolute right-4 bottom-4 text-gray-400 font-semibold">{s.k}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -217,7 +221,7 @@ export default function Home() {
                         </div>
                         <div className="mt-3 flex flex-wrap gap-2">
                           {item.tags.map((t) => (
-                            <span key={t} className="inline-flex items-center rounded-full bg-white text-gray-700 border px-3 py-1 text-[11px] shadow-sm">
+                            <span key={t} className="inline-flex items-center rounded-full bg-cyan-50 text-cyan-700 border border-cyan-100 px-3 py-1 text-[11px] shadow-sm">
                               {t}
                             </span>
                           ))}
