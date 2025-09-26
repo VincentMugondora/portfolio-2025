@@ -22,7 +22,7 @@ export default function Navbar() {
               <NavLink to="/about" className={linkClass}>About</NavLink>
               <NavLink to="/services" className={linkClass}>Services</NavLink>
               <NavLink to="/portfolio" className={linkClass}>Portfolio</NavLink>
-              <a href="/#blog" className={linkClass}>Blog</a>
+              <a href="/blog" className={linkClass}>Blog</a>
               <NavLink to="/contact" className={linkClass}>Contact</NavLink>
             </nav>
 
@@ -43,4 +43,3 @@ export default function Navbar() {
     </>
   )
 }
-
