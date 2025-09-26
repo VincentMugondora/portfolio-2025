@@ -23,11 +23,13 @@ function createStorage(subfolder) {
   });
 }
 
+const allowedTypes = new Set(['image/png', 'image/jpeg', 'image/webp', 'application/pdf']);
+
 export const uploadCertificate = multer({
   storage: createStorage('certificates'),
   fileFilter: (_req, file, cb) => {
-    if (file.mimetype.startsWith('image/') || file.mimetype === 'application/pdf') cb(null, true);
-    else cb(new Error('Only images or PDF are allowed'));
+    if (allowedTypes.has(file.mimetype)) cb(null, true);
+    else cb(new Error('Only PNG, JPEG, WEBP images or PDF are allowed'));
   },
   limits: { fileSize: 20 * 1024 * 1024 },
 });
@@ -36,8 +38,8 @@ export const uploadCertificate = multer({
 export const uploadFile = multer({
   storage: createStorage('files'),
   fileFilter: (_req, file, cb) => {
-    if (file.mimetype.startsWith('image/') || file.mimetype === 'application/pdf') cb(null, true);
-    else cb(new Error('Only PNG/JPEG/WEBP images or PDF are allowed'));
+    if (allowedTypes.has(file.mimetype)) cb(null, true);
+    else cb(new Error('Only PNG, JPEG, WEBP images or PDF are allowed'));
   },
   // Allow up to 20MB to accommodate PDFs; image-specific 10MB check is done in controller level
   limits: { fileSize: 20 * 1024 * 1024 },
