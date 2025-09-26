@@ -7,7 +7,7 @@ export default function Navbar() {
     <>
     <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-2 md:py-3">
-        <div className="flex items-center justify-between rounded-[28px] border border-gray-200 bg-white px-3 py-2 md:px-5 md:py-3 shadow-sm">
+        <div className="flex items-center justify-between rounded-[20px] border border-gray-200 bg-white px-3 py-2 md:px-5 md:py-3 shadow-sm">
           {/* Brand */}
           <div className="flex items-center gap-2">
             <div className="grid h-8 w-8 place-items-center rounded-full border border-gray-300 text-gray-900 font-bold">V</div>
