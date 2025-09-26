@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiPenTool, FiCode, FiImage, FiType } from 'react-icons/fi'
+import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiCode, FiCpu, FiSmartphone, FiCloud } from 'react-icons/fi'
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
                   Hi, I’m a<br />full‑stack<br />developer<span className="align-top">©</span>
                 </h1>
                 <p className="mt-5 max-w-md text-gray-600">
-                  I craft fast, accessible web apps with React, Node.js, and MongoDB — from idea to production.
+                  I build ML‑powered web and mobile apps with React, React Native, Node.js, and Python — from data to production.
                 </p>
                 <div className="mt-7">
                   <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-5 py-2.5 text-sm hover:bg-gray-900">
@@ -35,8 +35,8 @@ export default function Home() {
                   <div className="mt-3 aspect-[4/3] rounded-lg bg-gray-100 overflow-hidden" />
                   <div className="mt-3 flex items-center justify-between text-xs">
                     <div className="inline-flex items-center gap-1 text-gray-700">
-                      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-black text-white text-[10px]">FS</span>
-                      FULL‑STACK EXPERT
+                      <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-black text-white text-[10px]">ML</span>
+                      FULL‑STACK + ML EXPERT
                     </div>
                     <div className="text-sky-600 font-semibold">$150 – $300/HR</div>
                   </div>
@@ -47,11 +47,14 @@ export default function Home() {
                 </div>
                 {/* Gradient brands card */}
                 <div className="col-span-2 relative rounded-2xl p-4 md:p-5" style={{background:'linear-gradient(135deg,#93c5fd 0%, #60a5fa 40%, #1d4ed8 100%)'}}>
-                  <div className="text-white/90 text-sm">The most recent brands<br/>I happily worked with &lt;3</div>
+                  <div className="text-white/90 text-sm">Recent tools & platforms I build with</div>
                   <div className="mt-3 flex flex-wrap items-center gap-4 text-white/90 font-semibold">
-                    <span>Squarespace</span>
-                    <span>asana</span>
-                    <span>attent</span>
+                    <span>AWS</span>
+                    <span>GCP</span>
+                    <span>PyTorch</span>
+                    <span>TensorFlow</span>
+                    <span>React</span>
+                    <span>Node.js</span>
                   </div>
                   {/* Social icons rail */}
                   <div className="hidden md:flex flex-col gap-3 absolute right-[-18px] top-1/2 -translate-y-1/2">
@@ -81,11 +84,10 @@ export default function Home() {
           {/* Mission banner */}
           <div className="rounded-[30px] text-white p-6 md:p-10 shadow-[0_10px_30px_rgba(0,0,0,0.08)]" style={{background:'linear-gradient(180deg,#1497A4 0%, #0F8E9B 100%)'}}>
             <p className="text-2xl md:text-4xl font-semibold leading-snug max-w-5xl">
-              My mission is to assist startups and enterprises in creating an emotional bond between their products and
-              satisfied, engaged customers.
+              My mission is to help teams ship reliable, data‑driven products — blending full‑stack engineering, machine learning, and mobile to delight users and drive outcomes.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-white/70">
-              {['Jeep','amazon','bitcoin','HubSpot','stripe','Google'].map((b) => (
+              {['AWS','GCP','PyTorch','TensorFlow','React','Node.js'].map((b) => (
                 <span key={b} className="text-sm md:text-base font-semibold tracking-wider">
                   {b}
                 </span>
@@ -106,31 +108,31 @@ export default function Home() {
               {[
                 {
                   k: '01',
-                  title: 'UI Design',
+                  title: 'Full‑Stack Web Development',
                   desc:
-                    'We create intuitive, visually appealing interfaces that enhance user experience and navigation, ensuring your app is both beautiful and functional across all devices.',
-                  icon: FiPenTool,
-                },
-                {
-                  k: '02',
-                  title: 'Development',
-                  desc:
-                    'Our team builds reliable, scalable solutions, delivering clean code that powers websites and mobile apps with top‑notch performance and security.',
+                    'Production‑ready frontends (React/Vite) and secure APIs (Node.js/Express) backed by MongoDB/Postgres, with testing and CI/CD.',
                   icon: FiCode,
                 },
                 {
-                  k: '03',
-                  title: 'Graphic Design',
+                  k: '02',
+                  title: 'Machine Learning & AI',
                   desc:
-                    'We design responsive, user‑friendly websites that blend aesthetics with functionality, providing a seamless experience across devices and reflecting your brand’s identity.',
-                  icon: FiImage,
+                    'Model development with PyTorch/TensorFlow, NLP/CV, feature engineering, and serving models behind scalable REST/gRPC endpoints.',
+                  icon: FiCpu,
+                },
+                {
+                  k: '03',
+                  title: 'Mobile App Development',
+                  desc:
+                    'Cross‑platform apps with React Native, offline‑first UX, native modules, and app store deployment and analytics.',
+                  icon: FiSmartphone,
                 },
                 {
                   k: '04',
-                  title: 'Branding',
+                  title: 'MLOps & Cloud',
                   desc:
-                    'We craft memorable brand identities, from logos to complete strategies, ensuring consistency and a strong connection with your audience across all platforms.',
-                  icon: FiType,
+                    'Pipelines and deployments with Docker, Kubernetes, MLflow, and AWS/GCP; monitoring, tracing, and cost‑effective scaling.',
+                  icon: FiCloud,
                 },
               ].map((s) => (
                 <div key={s.k} className="relative rounded-[22px] bg-white p-4 md:p-5 border border-gray-100 shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
