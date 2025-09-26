@@ -4,6 +4,7 @@ import { uploadUrl } from '../lib/url'
 
 export default function Projects() {
   const [items, setItems] = useState([])
+  const [viewer, setViewer] = useState({ open: false, images: [], index: 0, title: '' })
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
@@ -30,14 +31,24 @@ export default function Projects() {
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((p) => (
-            <article key={p._id} className="rounded-[24px] bg-white border border-gray-200 shadow-sm overflow-hidden flex flex-col">
-              <div className="aspect-[16/10] w-full overflow-hidden bg-gray-100">
+            <article key={p._id} className="rounded-[24px] bg-white border border-gray-200 shadow-sm overflow-hidden flex flex-col transition hover:shadow-md">
+              <button
+                type="button"
+                className="aspect-[16/10] w-full overflow-hidden bg-gray-100"
+                onClick={() => {
+                  const imgs = Array.isArray(p.screenshots) ? p.screenshots : []
+                  if (imgs.length > 0) {
+                    setViewer({ open: true, images: imgs, index: 0, title: p.title })
+                  }
+                }}
+                aria-label={`View images for ${p.title}`}
+              >
                 {Array.isArray(p.screenshots) && p.screenshots.length > 0 ? (
                   <img src={uploadUrl(p.screenshots[0])} alt={p.title} className="h-full w-full object-cover" loading="lazy" />
                 ) : (
                   <div className="h-full w-full grid place-items-center text-gray-400 text-sm">No image</div>
                 )}
-              </div>
+              </button>
               <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3 flex-1 flex flex-col">
                 <h2 className="text-lg font-semibold">{p.title}</h2>
                 {p.description && <p className="mt-2 text-sm text-gray-600 flex-1">{p.description}</p>}
@@ -65,6 +76,47 @@ export default function Projects() {
               </div>
             </article>
           ))}
+        </div>
+      )}
+
+      {viewer.open && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setViewer((v) => ({ ...v, open: false }))}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <div className="rounded-2xl overflow-hidden bg-gray-900">
+              <img
+                src={uploadUrl(viewer.images[viewer.index])}
+                alt={viewer.title}
+                className="w-full h-full object-contain max-h-[80vh] bg-black"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-3 flex items-center justify-between text-white">
+              <button
+                type="button"
+                className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-sm hover:bg-white/20"
+                onClick={() => setViewer((v) => ({ ...v, open: false }))}
+              >
+                Close
+              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-full bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20"
+                  onClick={() => setViewer((v) => ({ ...v, index: (v.index - 1 + v.images.length) % v.images.length }))}
+                >
+                  Prev
+                </button>
+                <span className="text-xs text-white/80">{viewer.index + 1} / {viewer.images.length}</span>
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-full bg-white/10 px-3 py-1.5 text-sm hover:bg-white/20"
+                  onClick={() => setViewer((v) => ({ ...v, index: (v.index + 1) % v.images.length }))}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </section>

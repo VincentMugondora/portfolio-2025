@@ -29,21 +29,29 @@ export default function Certificates() {
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((c) => (
-            <article key={c._id} className="bg-white rounded-lg border overflow-hidden">
-              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+            <article key={c._id} className="rounded-[24px] bg-white border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
                 {c.fileType === 'image' ? (
-                  <img src={uploadUrl(c.fileUrl)} alt={c.title} className="object-contain w-full h-full" />
+                  <img src={uploadUrl(c.fileUrl)} alt={c.title} className="h-full w-full object-cover" loading="lazy" />
                 ) : (
-                  <object data={uploadUrl(c.fileUrl)} type="application/pdf" className="w-full h-full">
-                    <a href={uploadUrl(c.fileUrl)} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
-                      View PDF
-                    </a>
-                  </object>
+                  <div className="h-full w-full grid place-items-center text-gray-700">
+                    <span className="inline-flex items-center rounded-full bg-white text-gray-900 px-3 py-1 ring-1 ring-gray-200 text-sm">PDF Document</span>
+                  </div>
+                )}
+                {c.fileType === 'pdf' && (
+                  <a href={uploadUrl(c.fileUrl)} target="_blank" rel="noreferrer" className="absolute bottom-2 right-2 inline-flex items-center rounded-full bg-black text-white px-3 py-1.5 text-xs hover:bg-gray-900">
+                    View PDF
+                  </a>
                 )}
               </div>
-              <div className="p-4">
-                <h2 className="font-semibold">{c.title}</h2>
-                {c.description && <p className="text-gray-600 text-sm mt-1">{c.description}</p>}
+              <div className="px-4 md:px-5 pb-4 md:pb-5 pt-3 flex-1 flex flex-col">
+                <h2 className="text-lg font-semibold">{c.title}</h2>
+                {c.description && <p className="mt-2 text-sm text-gray-600 flex-1">{c.description}</p>}
+                {c.fileType !== 'pdf' && (
+                  <div className="mt-3">
+                    <a href={uploadUrl(c.fileUrl)} target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full bg-white text-gray-900 px-3 py-1.5 text-sm ring-1 ring-gray-200 hover:bg-gray-50">View full</a>
+                  </div>
+                )}
               </div>
             </article>
           ))}
