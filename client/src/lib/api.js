@@ -71,3 +71,12 @@ export const messages = {
   list: () => request('/messages', { auth: true }),
   markRead: (id) => request(`/messages/${id}/read`, { method: 'PATCH', auth: true }),
 }
+
+// Generic uploads (admin-only)
+export const uploads = {
+  upload: (file) => {
+    const form = new FormData()
+    form.append('file', file)
+    return request('/uploads', { method: 'POST', body: form, isForm: true, auth: true })
+  },
+}

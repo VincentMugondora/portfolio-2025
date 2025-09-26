@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { auth, clearToken, projects, skills, certificates, messages } from '../../lib/api'
+import { auth, clearToken, projects, skills, certificates, messages, uploads } from '../../lib/api'
 import { useNavigate } from 'react-router-dom'
 import { uploadUrl } from '../../lib/url'
 
@@ -19,7 +19,7 @@ function ProjectsManager() {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-  const [form, setForm] = useState({ title: '', description: '', techStack: '', githubUrl: '', demoUrl: '' })
+  const [form, setForm] = useState({ title: '', description: '', techStack: '', githubUrl: '', demoUrl: '', screenshots: [] })
 
   const load = () => {
     setLoading(true)
@@ -36,6 +36,27 @@ function ProjectsManager() {
 
   const onChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 
+  const onScreenshotsSelected = async (e) => {
+    const files = Array.from(e.target.files || [])
+    if (files.length === 0) return
+    try {
+      // upload sequentially to keep it simple and show in selected order
+      const uploaded = []
+      for (const file of files) {
+        const res = await uploads.upload(file)
+        if (res?.url) uploaded.push(res.url)
+      }
+      setForm((f) => ({ ...f, screenshots: [...(f.screenshots || []), ...uploaded] }))
+      e.target.value = ''
+    } catch (err) {
+      alert(err.message || 'Upload failed')
+    }
+  }
+
+  const removeScreenshot = (url) => {
+    setForm((f) => ({ ...f, screenshots: (f.screenshots || []).filter((u) => u !== url) }))
+  }
+
   const onCreate = async (e) => {
     e.preventDefault()
     try {
@@ -48,9 +69,10 @@ function ProjectsManager() {
           .filter(Boolean),
         githubUrl: form.githubUrl,
         demoUrl: form.demoUrl,
+        screenshots: form.screenshots || [],
       }
       await projects.create(payload)
-      setForm({ title: '', description: '', techStack: '', githubUrl: '', demoUrl: '' })
+      setForm({ title: '', description: '', techStack: '', githubUrl: '', demoUrl: '', screenshots: [] })
       load()
     } catch (e) {
       setError(e.message)
@@ -85,6 +107,28 @@ function ProjectsManager() {
         <div>
           <label className="block text-sm mb-1">Demo URL</label>
           <input name="demoUrl" value={form.demoUrl} onChange={onChange} className="w-full border rounded px-3 py-2" />
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-sm mb-1">Screenshots (images)</label>
+          <input type="file" accept="image/*" multiple onChange={onScreenshotsSelected} className="w-full" />
+          {(form.screenshots || []).length > 0 && (
+            <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {form.screenshots.map((url) => (
+                <div key={url} className="relative group">
+                  <div className="aspect-[16/10] overflow-hidden rounded border">
+                    <img src={url} alt="screenshot" className="h-full w-full object-cover" />
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => removeScreenshot(url)}
+                    className="mt-1 text-xs text-red-600 hover:underline"
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <div className="md:col-span-2">
           <button className="inline-flex items-center rounded-full bg-black text-white px-5 py-2 text-sm hover:bg-gray-900">Add Project</button>
