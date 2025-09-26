@@ -148,7 +148,7 @@ export default function Home() {
               <div className="lg:col-span-3">
                 <h2 className="text-3xl md:text-4xl font-bold">Selected<br/>work</h2>
                 <div className="mt-4">
-                  <Link to="/projects" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">See All</Link>
+                  <Link to="/portfolio" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">See All</Link>
                 </div>
                 <p className="mt-6 text-sm text-gray-600 max-w-xs">
                   Full‑Stack Developer • ML Scientist • Mobile App Developer. I ship performant products end‑to‑end: React/Node, Python ML, and React Native.
