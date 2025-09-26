@@ -1,0 +1,12 @@
+{
+  "name": "my-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently -n server,client -c magenta,cyan \"npm --workspace server run dev\" \"npm --workspace client run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
