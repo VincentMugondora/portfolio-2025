@@ -38,6 +38,8 @@ export default function Footer() {
             {/* Social + Contact */}
             <div>
               <div className="text-sm font-semibold text-gray-800">Connect</div>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <a href="mailto:vincent@uncommon.org" className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm text-gray-800 ring-1 ring-gray-200 hover:bg-gray-50">
                   <FiMail className="h-4 w-4" /> vincent@uncommon.org
                 </a>
                 <a href="#" target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white text-gray-800 shadow hover:bg-black hover:text-white"><FiLinkedin className="h-4 w-4" /></a>
