@@ -164,6 +164,9 @@ export default function Home() {
                 <div className="mt-4">
                   <Link to="/projects" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">See All</Link>
                 </div>
+                <p className="mt-6 text-sm text-gray-600 max-w-xs">
+                  Full‑Stack Developer • ML Scientist • Mobile App Developer. I ship performant products end‑to‑end: React/Node, Python ML, and React Native.
+                </p>
               </div>
 
               {/* Right content */}
@@ -175,7 +178,7 @@ export default function Home() {
                       id: 1,
                       title: 'Digital Agency',
                       year: 2021,
-                      tags: ['UI DESIGN', 'MOBILE DEV'],
+                      tags: ['FULL STACK', 'MOBILE DEV'],
                       image: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=1600&auto=format&fit=crop',
                       featured: true,
                     },
@@ -190,22 +193,22 @@ export default function Home() {
                       id: 3,
                       title: 'PayU',
                       year: 2024,
-                      tags: ['UI DESIGN', 'WEB DEV'],
+                      tags: ['FULL STACK', 'WEB DEV'],
                       image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?q=80&w=1600&auto=format&fit=crop',
                     },
                     {
                       id: 4,
                       title: 'CompAI',
                       year: 2024,
-                      tags: ['UI DESIGN', 'MOBILE DEV', 'WEB DEV'],
-                      image: 'https://images.unsplash.com/photo-1551817958-20204d6ab674?q=80&w=1600&auto=format&fit=crop',
+                      tags: ['ML', 'MOBILE DEV', 'WEB DEV'],
+                      image: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1600&auto=format&fit=crop',
                     },
                     {
                       id: 5,
                       title: 'ChatPic.AI',
                       year: 2024,
-                      tags: ['UI DESIGN', 'MOBILE DEV'],
-                      image: 'https://images.unsplash.com/photo-1551817958-4065b8b71f63?q=80&w=1600&auto=format&fit=crop',
+                      tags: ['ML', 'MOBILE DEV'],
+                      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1600&auto=format&fit=crop',
                     },
                   ]
 
