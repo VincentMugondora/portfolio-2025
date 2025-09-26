@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
-import Certificates from './Certificates.jsx'
 
 export default function Portfolio() {
   return (
@@ -14,9 +13,9 @@ export default function Portfolio() {
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-gray-800 shadow">PORTFOLIO</span>
                 <h1 className="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                  Projects & Skills
+                  Projects, Certificates & Skills
                 </h1>
-                <p className="mt-3 text-gray-600 max-w-2xl">A selection of my work and the skills I use to deliver production‑ready products.</p>
+                <p className="mt-3 text-gray-600 max-w-2xl">A selection of my work, certifications, and the skills I use to deliver production‑ready products.</p>
               </div>
               <div>
                 <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-5 py-2.5 text-sm hover:bg-gray-900">
@@ -35,17 +34,17 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Skills section */}
-      <section className="relative pb-16">
-        <div className="container mx-auto px-4">
-          <Skills />
-        </div>
-      </section>
-
       {/* Certificates section */}
       <section className="relative pb-16">
         <div className="container mx-auto px-4">
           <Certificates />
+        </div>
+      </section>
+
+      {/* Skills section */}
+      <section className="relative pb-16">
+        <div className="container mx-auto px-4">
+          <Skills />
         </div>
       </section>
     </>
