@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiCode, FiCpu, FiSmartphone, FiCloud } from 'react-icons/fi'
+import { SiGoogle, SiGrammarly, SiAirbnb } from 'react-icons/si'
 
 export default function Home() {
   return (
@@ -288,22 +289,31 @@ export default function Home() {
               </div>
 
               {/* Google */}
-              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
-                <div className="text-gray-400 font-semibold">Google</div>
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-2 text-gray-400 font-semibold">
+                  <SiGoogle className="h-4 w-4" />
+                  Google
+                </div>
                 <div className="mt-1 text-gray-800">Full‑time Software Engineer (Web) at Google</div>
                 <div className="mt-3 text-xs text-gray-500">2016–2019</div>
               </div>
 
               {/* Grammarly */}
-              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
-                <div className="text-gray-400 font-semibold">grammarly</div>
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-2 text-gray-400 font-semibold">
+                  <SiGrammarly className="h-4 w-4" />
+                  Grammarly
+                </div>
                 <div className="mt-1 text-gray-800">Part‑time Developer at Grammarly</div>
                 <div className="mt-3 text-xs text-gray-500">2016–2019</div>
               </div>
 
               {/* Airbnb */}
-              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
-                <div className="text-gray-400 font-semibold">airbnb</div>
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center gap-2 text-gray-400 font-semibold">
+                  <SiAirbnb className="h-4 w-4" />
+                  Airbnb
+                </div>
                 <div className="mt-1 text-gray-800">Full‑time Mobile/ML Engineer at Airbnb</div>
                 <div className="mt-3 text-xs text-gray-500">2016–2019</div>
               </div>
