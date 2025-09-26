@@ -1,7 +1,44 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiCode, FiCpu, FiSmartphone, FiCloud, FiBriefcase, FiGlobe, FiTrendingUp } from 'react-icons/fi'
+import { apiBase } from '../lib/url.js'
 
 export default function Home() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const API = apiBase()
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setForm((f) => ({ ...f, [name]: value }))
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setSubmitting(true)
+    setSubmitted(false)
+    setError('')
+    try {
+      const res = await fetch(`${API}/messages`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: form.name, email: form.email, message: form.message })
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.message || 'Failed to send')
+      }
+      setSubmitted(true)
+      setForm({ name: '', email: '', message: '' })
+    } catch (err) {
+      setError(err.message || 'Failed to send')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
   return (
     <>
       <section className="relative pt-6 md:pt-8 pb-10 md:pb-12">
@@ -317,6 +354,67 @@ export default function Home() {
                 <div className="mt-3 text-xs text-gray-500">2025–present</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <section className="relative pb-16">
+        <div className="container mx-auto px-4">
+          <div
+            className="rounded-[28px] p-6 md:p-10 shadow-sm overflow-hidden"
+            style={{
+              backgroundImage:
+                "radial-gradient(600px 300px at -10% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0) 60%), linear-gradient(90deg, #F3F4FF 0%, #DAD2FF 45%, #C9B7FF 100%), url('/contact-section.jpg')",
+              backgroundSize: 'auto, auto, cover',
+              backgroundPosition: 'center, center, center'
+            }}
+          >
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">Contact with me to sizzle your project</h3>
+            <p className="mt-2 text-center text-gray-700/80">Feel free to contact me if having any questions. I'm available for new projects or just for chatting.</p>
+
+            <form onSubmit={handleSubmit} className="mt-8 max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Name"
+                  className="w-full rounded-full bg-white/80 backdrop-blur px-5 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none ring-1 ring-white/60 focus:ring-gray-300"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email"
+                  className="w-full rounded-full bg-white/80 backdrop-blur px-5 py-3 text-sm text-gray-800 placeholder-gray-400 outline-none ring-1 ring-white/60 focus:ring-gray-300"
+                  required
+                />
+              </div>
+              <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Work Description..."
+                rows={5}
+                className="mt-4 w-full rounded-2xl bg-white/80 backdrop-blur px-5 py-4 text-sm text-gray-800 placeholder-gray-400 outline-none ring-1 ring-white/60 focus:ring-gray-300"
+                required
+              />
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="mt-6 w-full md:w-auto md:min-w-[300px] mx-auto block rounded-full bg-black text-white px-8 py-3 text-sm shadow-[0_6px_0_rgba(0,0,0,0.25)] hover:bg-gray-900 disabled:opacity-60"
+              >
+                {submitting ? 'Submitting...' : 'Submit'}
+              </button>
+
+              {submitted && <div className="mt-3 text-center text-green-700">Thanks! Your message has been sent.</div>}
+              {error && !submitted && <div className="mt-3 text-center text-red-600">{error}</div>}
+            </form>
           </div>
         </div>
       </section>
