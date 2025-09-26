@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Services from '../components/Services.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 
 export default function ServicesPage() {
   return (
@@ -43,6 +44,9 @@ export default function ServicesPage() {
 
       {/* Services grid */}
       <Services />
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* CTA */}
       <section className="relative pb-16">
