@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
+const linkClass = 'px-2.5 py-1.5 text-xs md:text-sm text-gray-700 hover:text-black'
  
-
 export default function Navbar() {
   return (
     <>
@@ -15,6 +15,15 @@ export default function Navbar() {
               Vincent Mugondora
             </NavLink>
           </div>
+
+          {/* Center nav */}
+          <nav className="hidden md:flex items-center gap-2 sm:gap-3">
+            <a href="/#about" className={linkClass}>About</a>
+            <a href="/#services" className={linkClass}>Services</a>
+            <NavLink to="/projects" className={linkClass}>Portfolio</NavLink>
+            <a href="/#blog" className={linkClass}>Blog</a>
+            <NavLink to="/contact" className={linkClass}>Contact</NavLink>
+          </nav>
 
           {/* Right CTA */}
           <div className="flex items-center">
