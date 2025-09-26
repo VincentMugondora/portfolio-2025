@@ -274,6 +274,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience section */}
+      <section className="relative pb-16">
+        <div className="container mx-auto px-4">
+          <div className="rounded-[28px] bg-gray-100 p-4 md:p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Intro card */}
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm flex flex-col justify-between">
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight">Wanna see<br/>my experience?</h3>
+                <div className="mt-6">
+                  <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">Book a call</Link>
+                </div>
+              </div>
+
+              {/* Google */}
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
+                <div className="text-gray-400 font-semibold">Google</div>
+                <div className="mt-1 text-gray-800">Full‑time Software Engineer (Web) at Google</div>
+                <div className="mt-3 text-xs text-gray-500">2016–2019</div>
+              </div>
+
+              {/* Grammarly */}
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
+                <div className="text-gray-400 font-semibold">grammarly</div>
+                <div className="mt-1 text-gray-800">Part‑time Developer at Grammarly</div>
+                <div className="mt-3 text-xs text-gray-500">2016–2019</div>
+              </div>
+
+              {/* Airbnb */}
+              <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm">
+                <div className="text-gray-400 font-semibold">airbnb</div>
+                <div className="mt-1 text-gray-800">Full‑time Mobile/ML Engineer at Airbnb</div>
+                <div className="mt-3 text-xs text-gray-500">2016–2019</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }
