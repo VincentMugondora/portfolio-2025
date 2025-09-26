@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { FiLinkedin, FiGithub, FiInstagram, FiTwitter, FiCode, FiCpu, FiSmartphone, FiCloud, FiBriefcase, FiGlobe, FiTrendingUp, FiArrowUpRight } from 'react-icons/fi'
 import { apiBase } from '../lib/url.js'
 import Services from '../components/Services.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 
 export default function Home() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -260,6 +261,7 @@ export default function Home() {
       </section>
 
       {/* Experience section */}
+      <Testimonials />
       <section className="relative pb-16">
         <div className="container mx-auto px-4">
           <div className="rounded-[28px] bg-gray-100 p-4 md:p-6">
