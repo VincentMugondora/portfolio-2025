@@ -29,7 +29,7 @@ export const uploadCertificate = multer({
     if (file.mimetype.startsWith('image/') || file.mimetype === 'application/pdf') cb(null, true);
     else cb(new Error('Only images or PDF are allowed'));
   },
-  limits: { fileSize: 10 * 1024 * 1024 },
+  limits: { fileSize: 20 * 1024 * 1024 },
 });
 
 // Generic file upload (used by /api/uploads). Stores under uploads/files
