@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import Certificates from './pages/Certificates.jsx'
 import Skills from './pages/Skills.jsx'
@@ -18,6 +19,7 @@ function App() {
       <main className="flex-1 container mx-auto px-4 py-4 md:py-6">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/skills" element={<Skills />} />
