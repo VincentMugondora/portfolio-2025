@@ -29,6 +29,8 @@ export default function Navbar() {
             <div className="flex items-center">
               <NavLink
                 to="/contact"
+                className="inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 hover:bg-gray-900 shadow-inner"
+              >
                 Book a call
               </NavLink>
             </div>
