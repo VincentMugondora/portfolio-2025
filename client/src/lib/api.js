@@ -80,3 +80,8 @@ export const uploads = {
     return request('/uploads', { method: 'POST', body: form, isForm: true, auth: true })
   },
 }
+
+// AI endpoints
+export const ai = {
+  predictIntents: (text) => request('/ai/predict-intents', { method: 'POST', body: { text } }),
+}
