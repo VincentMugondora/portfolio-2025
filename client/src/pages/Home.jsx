@@ -71,13 +71,14 @@ export default function Home() {
                 <div className="rounded-2xl bg-white p-4 shadow-sm">
                   <div className="text-sm font-semibold">Vincent Mugondora</div>
                   <div className="text-xs text-gray-500">Harare, Zimbabwe</div>
-                  <div className="mt-3 aspect-[4/3] rounded-lg bg-gray-100 overflow-hidden" />
+                  <div className="mt-3 aspect-[4/3] rounded-lg bg-gray-600 overflow-hidden">
+                    <img src="/full.jpeg" alt="Portrait" className="h-full w-full object-cover" loading="lazy" />
+                  </div>
                   <div className="mt-3 flex items-center justify-between text-xs">
                     <div className="inline-flex items-center gap-1 text-gray-700">
                       <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-black text-white text-[10px]">ML</span>
                       FULL‑STACK + ML EXPERT
                     </div>
-                    <div className="text-sky-600 font-semibold">$150 – $300/HR</div>
                   </div>
                 </div>
                 {/* Portrait */}
