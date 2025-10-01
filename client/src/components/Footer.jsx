@@ -15,7 +15,7 @@ export default function Footer() {
                 <div className="text-xl font-semibold">Vincent<span className="text-orange-500">.</span></div>
               </div>
               <p className="mt-3 text-sm text-gray-600 max-w-xs">
-                Full‑stack • ML • Mobile. Based in Harare, Zimbabwe.
+                Software Developer & Coding Instructor. Harare, Zimbabwe. Open to collaborations.
               </p>
               <Link to="/contact" className="mt-4 inline-flex items-center rounded-full bg-black text-white px-4 py-1.5 text-sm hover:bg-gray-900">
                 Book a call

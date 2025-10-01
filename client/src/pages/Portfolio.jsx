@@ -18,7 +18,7 @@ export default function Portfolio() {
                 <h1 className="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
                   Projects, Certificates & Skills
                 </h1>
-                <p className="mt-3 text-gray-600 max-w-2xl">A selection of my work, certifications, and the skills I use to deliver production‑ready products.</p>
+                <p className="mt-3 text-gray-600 max-w-2xl">A selection of meaningful applications I’ve built, certifications, and the skills I use — while teaching coding to young developers in Zimbabwe.</p>
               </div>
               <div>
                 <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-5 py-2.5 text-sm hover:bg-gray-900">

@@ -32,8 +32,8 @@ export default function Contact() {
               {/* Left: Info */}
               <div className="lg:col-span-5 flex flex-col gap-4">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-gray-800 shadow">CONTACT</span>
-                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">Let's work together</h1>
-                <p className="text-gray-600 max-w-md">Tell me a bit about your project. I usually reply within 24 hours.</p>
+                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">Let’s build something impactful</h1>
+                <p className="text-gray-600 max-w-md">I’m open to new opportunities and collaborations. Share a bit about your project — I usually reply within 24 hours.</p>
 
                 <div className="rounded-2xl bg-white p-5 border border-gray-100 shadow-sm">
                   <div className="space-y-3 text-sm">

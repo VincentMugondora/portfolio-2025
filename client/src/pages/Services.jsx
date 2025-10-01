@@ -18,7 +18,7 @@ export default function ServicesPage() {
                   What I Do
                 </h1>
                 <p className="mt-4 text-gray-600 max-w-2xl">
-                  From front‑end interfaces to back‑end APIs, production ML, and mobile apps — I design, build, and ship reliable products end‑to‑end.
+                  I build modern web applications with JavaScript, React, Node.js, and MongoDB — plus mobile apps when needed. I care about clear UX, reliable APIs, and maintainable delivery.
                 </p>
                 <div className="mt-6">
                   <Link to="/contact" className="inline-flex items-center rounded-full bg-black text-white px-5 py-2.5 text-sm hover:bg-gray-900">
@@ -30,7 +30,7 @@ export default function ServicesPage() {
                 <div className="rounded-2xl bg-white p-5 border border-gray-100 shadow-sm">
                   <div className="text-sm text-gray-600">Highlights</div>
                   <ul className="mt-3 space-y-2 text-sm text-gray-800">
-                    <li>React, Node.js, Python/ML</li>
+                    <li>JavaScript, React, Node.js, MongoDB</li>
                     <li>APIs, testing, CI/CD</li>
                     <li>Cloud: AWS, GCP</li>
                     <li>Mobile: React Native</li>
